@@ -1,0 +1,14 @@
+doxygen/doxygen_new_line_after_brief=true
+doxygen/doxygen_use_brief_tag=false
+doxygen/doxygen_use_javadoc_tags=true
+doxygen/doxygen_use_pre_tag=false
+doxygen/doxygen_use_structural_commands=false
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/CWD/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/CWD/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/CWD/value=Z\:\\F\\dev\\jobs\\asteroids-2k.mingw.gdi\\asteroids-2k\\Release
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/PWD/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/PWD/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/PWD/value=Z\:\\F\\dev\\jobs\\asteroids-2k.mingw.gdi\\asteroids-2k\\Release
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.994708613.477066562/appendContributed=true
