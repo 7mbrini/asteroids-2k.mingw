@@ -1,0 +1,13 @@
+N = New Game
+P = Pause
+S = Shield
+Q or ESC = Quit
+
+Left Arrow = Rotate Left
+Right Arrow = Rotate Right
+Up Arrow = Thrust
+Keypad Minus = Decrease Volume
+Keypad Plus = Increase Volume
+
+Bonus Ship Every 1000 Points
+
