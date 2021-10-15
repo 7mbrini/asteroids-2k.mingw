@@ -1,0 +1,265 @@
+\hypertarget{vectors_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/vectors.cpp File Reference}
+\label{vectors_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/vectors.cpp@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/vectors.cpp}}
+
+
+Vectors routines.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vectors_8cpp_acc9b0b8e13e7fec2662bdda71dfc4e4a}{Build}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Pt)
+\begin{DoxyCompactList}\small\item\em Builds the vector with values of Pt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_a67b09d64382a2105f9238bfce9301c65}{Build}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Pt, double X, double Y)
+\begin{DoxyCompactList}\small\item\em Builds the vector with values of X and Y. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vectors_8cpp_a9b477a01264b28fe9a59f4eb5a48469d}{Mod}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Pt)
+\begin{DoxyCompactList}\small\item\em Returng the length of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_a9d00c7bb32df7681f559172f430336e0}{Normalize}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Pt)
+\begin{DoxyCompactList}\small\item\em Normalizes the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8cpp_af5b00b9c10bbfe6adf2e81b3afe1c87b}{Add}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&A, \mbox{\hyperlink{struct_t_vector2}{TVector2}} \&B)
+\begin{DoxyCompactList}\small\item\em Calculates the Sum of two vectors. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vectors_8cpp_a8b06ed4b3e96661d9052ae2fda41633e}{Distance}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt1, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt2)
+\begin{DoxyCompactList}\small\item\em Calculates the euclidean distance between two points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8cpp_a02a72fcf81456139063f43c2751778c8}{Rotate}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Src, double Theta\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotates a point around the axis origin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_ab529019f48b3de5aab2a2074c7fe4527}{Rotate}} (TVec\+Points \&Vec\+Pts, double Theta\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotates a list of points around the axis origin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_a382f68f1b407c4e67d44d817cb31ebbc}{Rotate}} (TVec\+Vec\+Points \&Vec\+Pts, double Theta\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotates a list of a list of points around the axis origin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8cpp_a7fa16e5d006d9acc675fb2143bf43808}{Translate}} (\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Src, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation)
+\begin{DoxyCompactList}\small\item\em Translates a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_a905dc1ba38aecd411c97f0fa3c7a9c1c}{Translate}} (TVec\+Points \&Src, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation)
+\begin{DoxyCompactList}\small\item\em Translates a list of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vectors_8cpp_a34f3ac320080585dd7789856fbc51654}{Translate}} (TVec\+Vec\+Points \&Vec\+Pts, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation)
+\begin{DoxyCompactList}\small\item\em Translates a list of a list of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vectors routines. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vectors_8cpp_af5b00b9c10bbfe6adf2e81b3afe1c87b}\label{vectors_8cpp_af5b00b9c10bbfe6adf2e81b3afe1c87b}} 
+\index{vectors.cpp@{vectors.cpp}!Add@{Add}}
+\index{Add@{Add}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{A,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{B }\end{DoxyParamCaption})}
+
+
+
+Calculates the Sum of two vectors. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em A} & Referernce to a vector data structure \\
+\hline
+{\em B} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vectors_8cpp_acc9b0b8e13e7fec2662bdda71dfc4e4a}\label{vectors_8cpp_acc9b0b8e13e7fec2662bdda71dfc4e4a}} 
+\index{vectors.cpp@{vectors.cpp}!Build@{Build}}
+\index{Build@{Build}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Pt }\end{DoxyParamCaption})}
+
+
+
+Builds the vector with values of Pt. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pt} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a67b09d64382a2105f9238bfce9301c65}\label{vectors_8cpp_a67b09d64382a2105f9238bfce9301c65}} 
+\index{vectors.cpp@{vectors.cpp}!Build@{Build}}
+\index{Build@{Build}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Pt,  }\item[{double}]{X,  }\item[{double}]{Y }\end{DoxyParamCaption})}
+
+
+
+Builds the vector with values of X and Y. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pt} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a8b06ed4b3e96661d9052ae2fda41633e}\label{vectors_8cpp_a8b06ed4b3e96661d9052ae2fda41633e}} 
+\index{vectors.cpp@{vectors.cpp}!Distance@{Distance}}
+\index{Distance@{Distance}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}}
+{\footnotesize\ttfamily double Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pt1,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pt2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the euclidean distance between two points. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pt1} & Referernce to a vector data structure \\
+\hline
+{\em Pt2} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The euclidean distance between two poins 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vectors_8cpp_a9b477a01264b28fe9a59f4eb5a48469d}\label{vectors_8cpp_a9b477a01264b28fe9a59f4eb5a48469d}} 
+\index{vectors.cpp@{vectors.cpp}!Mod@{Mod}}
+\index{Mod@{Mod}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Mod()}{Mod()}}
+{\footnotesize\ttfamily double Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Pt }\end{DoxyParamCaption})}
+
+
+
+Returng the length of the vector. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pt} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a9d00c7bb32df7681f559172f430336e0}\label{vectors_8cpp_a9d00c7bb32df7681f559172f430336e0}} 
+\index{vectors.cpp@{vectors.cpp}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Pt }\end{DoxyParamCaption})}
+
+
+
+Normalizes the vector. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pt} & Referernce to a vector data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_ab529019f48b3de5aab2a2074c7fe4527}\label{vectors_8cpp_ab529019f48b3de5aab2a2074c7fe4527}} 
+\index{vectors.cpp@{vectors.cpp}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Rotate (\begin{DoxyParamCaption}\item[{TVec\+Points \&}]{Vec\+Pts,  }\item[{double}]{Theta\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotates a list of points around the axis origin. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em Vec\+Pts} & Referernce to a list of points data structures \\
+\hline
+ & {\em Theta\+Deg} & The angle of rotation, in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a02a72fcf81456139063f43c2751778c8}\label{vectors_8cpp_a02a72fcf81456139063f43c2751778c8}} 
+\index{vectors.cpp@{vectors.cpp}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Src,  }\item[{double}]{Theta\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotates a point around the axis origin. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Src} & Referernce to a vector data structure \\
+\hline
+{\em Theta\+Deg} & The angle of rotation, in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input vector rotated by Theta\+Deg 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vectors_8cpp_a382f68f1b407c4e67d44d817cb31ebbc}\label{vectors_8cpp_a382f68f1b407c4e67d44d817cb31ebbc}} 
+\index{vectors.cpp@{vectors.cpp}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Rotate (\begin{DoxyParamCaption}\item[{TVec\+Vec\+Points \&}]{Vec\+Pts,  }\item[{double}]{Theta\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotates a list of a list of points around the axis origin. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em Src} & Referernce to a list of list of points data structures \\
+\hline
+ & {\em Theta\+Deg} & The angle of rotation, in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a905dc1ba38aecd411c97f0fa3c7a9c1c}\label{vectors_8cpp_a905dc1ba38aecd411c97f0fa3c7a9c1c}} 
+\index{vectors.cpp@{vectors.cpp}!Translate@{Translate}}
+\index{Translate@{Translate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Translate (\begin{DoxyParamCaption}\item[{TVec\+Points \&}]{Src,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Translation }\end{DoxyParamCaption})}
+
+
+
+Translates a list of points. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Src} & Referernce to a list of points data structures \\
+\hline
+{\em Translation} & The value for translation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vectors_8cpp_a7fa16e5d006d9acc675fb2143bf43808}\label{vectors_8cpp_a7fa16e5d006d9acc675fb2143bf43808}} 
+\index{vectors.cpp@{vectors.cpp}!Translate@{Translate}}
+\index{Translate@{Translate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}} \&}]{Src,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Translation }\end{DoxyParamCaption})}
+
+
+
+Translates a point. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Src} & Referernce to a vector data structure \\
+\hline
+{\em Translation} & The value for translation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input vector translated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vectors_8cpp_a34f3ac320080585dd7789856fbc51654}\label{vectors_8cpp_a34f3ac320080585dd7789856fbc51654}} 
+\index{vectors.cpp@{vectors.cpp}!Translate@{Translate}}
+\index{Translate@{Translate}!vectors.cpp@{vectors.cpp}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Translate (\begin{DoxyParamCaption}\item[{TVec\+Vec\+Points \&}]{Vec\+Pts,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Translation }\end{DoxyParamCaption})}
+
+
+
+Translates a list of a list of points. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Src} & Referernce to a list of list of points data structures \\
+\hline
+{\em Translation} & The value for translation \\
+\hline
+\end{DoxyParams}

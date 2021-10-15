@@ -1,0 +1,539 @@
+\hypertarget{ships_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/ships.cpp File Reference}
+\label{ships_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/ships.cpp@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/ships.cpp}}
+
+
+Spaceships modelling.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mmsystem.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}maths.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ships.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ships_8cpp_a9dc6af36297695fd08c97dcf3202f65a}\label{ships_8cpp_a9dc6af36297695fd08c97dcf3202f65a}} 
+\#define {\bfseries SHIELDTICKS}~100
+\begin{DoxyCompactList}\small\item\em Durata (in ticks) dello scudo difensivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ships_8cpp_a8b8a978ff1f4db87845a5e500ac3253f}{Build}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, en\+Ship\+Class n\+Class, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Size, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Builds the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_acb441a0cb135b9eec097279b468613fa}{Set\+Class}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, en\+Ship\+Class n\+Class)
+\begin{DoxyCompactList}\small\item\em Set the ship class (small, medium, big) \end{DoxyCompactList}\item 
+en\+Ship\+Class \mbox{\hyperlink{ships_8cpp_abd6b777fa09dd371980163fb1ff54235}{Get\+Class}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the ship class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a9a01df9914c3abfb7836313f6421382d}{Reset}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Reset the ship to the default properties. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ships_8cpp_a78936633c12d417e565118323865b98e}{Is\+Exploding}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return true if the ship is exploding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a6eebb5e296161fb1a8d977b6c4431a08}{Set\+Pos}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Set the ship position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{ships_8cpp_af7d3c1be6107d88331502a11d2b773c0}{Get\+Pos}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the ship position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_ab2235c088785efdbf499cbd2c0e137cd}{Set\+Rot}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, double Rot)
+\begin{DoxyCompactList}\small\item\em Set the ship rotation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ships_8cpp_a96a8c3803f53a2729c7da0372815987a}{Get\+Rot}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the ship rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a0c6181ae5d91e286868cc4102c1cc0f5}{Set\+Vel}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Set the ship velocity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{ships_8cpp_a1a49758ebcd22c577aeebf814c9cd20c}{Get\+Vel}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the ship velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_afd066e8c7f14500c910c85bf7e35ab35}{Set\+Color}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, COLORREF Color)
+\begin{DoxyCompactList}\small\item\em Set the color for the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a8fededbb977f078b5862f40343099ba7}{Rotate\+Left}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, double DAngle\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotate the ship to the left. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_ae80e53f34de49aa48f0da485d7d19a47}{Rotate\+Right}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, double DAngle\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotate the ship to the right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ships_8cpp_acc93ed44e4cc4b0372d97d12bc2bebc2}{Is\+Visible}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the ship visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ships_8cpp_a49bcbbc8a96e6d031f0d8d64c14aab5b}{Is\+Alive}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Returns the ship status, alive or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_aee0740a967ca628f858dcb36b1c7ea34}{Set\+Visible}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, bool b\+Visible)
+\begin{DoxyCompactList}\small\item\em Set the ship visiblity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_acc67141820b05c27253f724aff3dedd5}{Set\+Alive}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, bool b\+Alive)
+\begin{DoxyCompactList}\small\item\em Set the aliving status for the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a6cbb81461743e1045ddb728016a2a68d}{Impulse}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, double Impulse)
+\begin{DoxyCompactList}\small\item\em Give an impulse to the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a73523778eacf010d08817fb720639ef6}{Explode}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Manages the explosion of the spaceship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a0e237e3a771207660217be58a2348ea8}{Do\+Explosion}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Animate the explosion of the spaceship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_a8ff00ebc885b19bf655bf873ca24a6ca}{Update}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, double Dt)
+\begin{DoxyCompactList}\small\item\em Updates by time the spaceship status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ships_8cpp_ae31eec2c667e1990d5e86b127d4a788e}{Is\+Colliding}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Objects collision detection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ships_8cpp_acc085444912996921846bc1174b7ec47}{Activate\+The\+Shield}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Activate the shield to protect the ship against alien missiles. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ships_8cpp_ae3c18f9d1a4b20b1c8ddb9095bdd4f52}{Is\+Shield\+Active}} (\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Return the status of the shield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Spaceships modelling. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ships_8cpp_acc085444912996921846bc1174b7ec47}\label{ships_8cpp_acc085444912996921846bc1174b7ec47}} 
+\index{ships.cpp@{ships.cpp}!ActivateTheShield@{ActivateTheShield}}
+\index{ActivateTheShield@{ActivateTheShield}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{ActivateTheShield()}{ActivateTheShield()}}
+{\footnotesize\ttfamily void Activate\+The\+Shield (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Activate the shield to protect the ship against alien missiles. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a8b8a978ff1f4db87845a5e500ac3253f}\label{ships_8cpp_a8b8a978ff1f4db87845a5e500ac3253f}} 
+\index{ships.cpp@{ships.cpp}!Build@{Build}}
+\index{Build@{Build}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{en\+Ship\+Class}]{n\+Class,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Size,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Builds the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em p\+VM} & Pointer to the Video\+Manager \\
+\hline
+{\em p\+SM} & Pointer to the Sound\+Manager \\
+\hline
+{\em n\+Class} & Ship class (small, medium, big) \\
+\hline
+{\em Size} & Size of the ship \\
+\hline
+{\em Pos} & Initial position of the ship \\
+\hline
+{\em Vel} & Initial velocity of the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a0e237e3a771207660217be58a2348ea8}\label{ships_8cpp_a0e237e3a771207660217be58a2348ea8}} 
+\index{ships.cpp@{ships.cpp}!DoExplosion@{DoExplosion}}
+\index{DoExplosion@{DoExplosion}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{DoExplosion()}{DoExplosion()}}
+{\footnotesize\ttfamily void Do\+Explosion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Animate the explosion of the spaceship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a73523778eacf010d08817fb720639ef6}\label{ships_8cpp_a73523778eacf010d08817fb720639ef6}} 
+\index{ships.cpp@{ships.cpp}!Explode@{Explode}}
+\index{Explode@{Explode}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{Explode()}{Explode()}}
+{\footnotesize\ttfamily void Explode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Manages the explosion of the spaceship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_abd6b777fa09dd371980163fb1ff54235}\label{ships_8cpp_abd6b777fa09dd371980163fb1ff54235}} 
+\index{ships.cpp@{ships.cpp}!GetClass@{GetClass}}
+\index{GetClass@{GetClass}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{GetClass()}{GetClass()}}
+{\footnotesize\ttfamily en\+Ship\+Class Get\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the ship class. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ship class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_af7d3c1be6107d88331502a11d2b773c0}\label{ships_8cpp_af7d3c1be6107d88331502a11d2b773c0}} 
+\index{ships.cpp@{ships.cpp}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Get\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the ship position. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ship position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_a96a8c3803f53a2729c7da0372815987a}\label{ships_8cpp_a96a8c3803f53a2729c7da0372815987a}} 
+\index{ships.cpp@{ships.cpp}!GetRot@{GetRot}}
+\index{GetRot@{GetRot}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{GetRot()}{GetRot()}}
+{\footnotesize\ttfamily double Get\+Rot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the ship rotation. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the rotation angle in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_a1a49758ebcd22c577aeebf814c9cd20c}\label{ships_8cpp_a1a49758ebcd22c577aeebf814c9cd20c}} 
+\index{ships.cpp@{ships.cpp}!GetVel@{GetVel}}
+\index{GetVel@{GetVel}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{GetVel()}{GetVel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Get\+Vel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the ship velocity. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The velocity value of the ship 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_a6cbb81461743e1045ddb728016a2a68d}\label{ships_8cpp_a6cbb81461743e1045ddb728016a2a68d}} 
+\index{ships.cpp@{ships.cpp}!Impulse@{Impulse}}
+\index{Impulse@{Impulse}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{Impulse()}{Impulse()}}
+{\footnotesize\ttfamily void Impulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{double}]{Impulse }\end{DoxyParamCaption})}
+
+
+
+Give an impulse to the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Impulse} & The value of the impulse to be given to the spaceship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a49bcbbc8a96e6d031f0d8d64c14aab5b}\label{ships_8cpp_a49bcbbc8a96e6d031f0d8d64c14aab5b}} 
+\index{ships.cpp@{ships.cpp}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool Is\+Alive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Returns the ship status, alive or not. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ship is alive, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_ae31eec2c667e1990d5e86b127d4a788e}\label{ships_8cpp_ae31eec2c667e1990d5e86b127d4a788e}} 
+\index{ships.cpp@{ships.cpp}!IsColliding@{IsColliding}}
+\index{IsColliding@{IsColliding}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{IsColliding()}{IsColliding()}}
+{\footnotesize\ttfamily bool Is\+Colliding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Objects collision detection. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Pos} & Position to check for collision \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a78936633c12d417e565118323865b98e}\label{ships_8cpp_a78936633c12d417e565118323865b98e}} 
+\index{ships.cpp@{ships.cpp}!IsExploding@{IsExploding}}
+\index{IsExploding@{IsExploding}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{IsExploding()}{IsExploding()}}
+{\footnotesize\ttfamily bool Is\+Exploding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return true if the ship is exploding. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ship is exploding, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_ae3c18f9d1a4b20b1c8ddb9095bdd4f52}\label{ships_8cpp_ae3c18f9d1a4b20b1c8ddb9095bdd4f52}} 
+\index{ships.cpp@{ships.cpp}!IsShieldActive@{IsShieldActive}}
+\index{IsShieldActive@{IsShieldActive}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{IsShieldActive()}{IsShieldActive()}}
+{\footnotesize\ttfamily bool Is\+Shield\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the status of the shield. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_acc93ed44e4cc4b0372d97d12bc2bebc2}\label{ships_8cpp_acc93ed44e4cc4b0372d97d12bc2bebc2}} 
+\index{ships.cpp@{ships.cpp}!IsVisible@{IsVisible}}
+\index{IsVisible@{IsVisible}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{IsVisible()}{IsVisible()}}
+{\footnotesize\ttfamily bool Is\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Return the ship visibility. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ship is visible, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ships_8cpp_a9a01df9914c3abfb7836313f6421382d}\label{ships_8cpp_a9a01df9914c3abfb7836313f6421382d}} 
+\index{ships.cpp@{ships.cpp}!Reset@{Reset}}
+\index{Reset@{Reset}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Reset the ship to the default properties. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a8fededbb977f078b5862f40343099ba7}\label{ships_8cpp_a8fededbb977f078b5862f40343099ba7}} 
+\index{ships.cpp@{ships.cpp}!RotateLeft@{RotateLeft}}
+\index{RotateLeft@{RotateLeft}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{RotateLeft()}{RotateLeft()}}
+{\footnotesize\ttfamily void Rotate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{double}]{DAngle\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotate the ship to the left. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em DAngle\+Deg} & The rotation value in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_ae80e53f34de49aa48f0da485d7d19a47}\label{ships_8cpp_ae80e53f34de49aa48f0da485d7d19a47}} 
+\index{ships.cpp@{ships.cpp}!RotateRight@{RotateRight}}
+\index{RotateRight@{RotateRight}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{RotateRight()}{RotateRight()}}
+{\footnotesize\ttfamily void Rotate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{double}]{DAngle\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotate the ship to the right. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em DAngle\+Deg} & The rotation value in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_acc67141820b05c27253f724aff3dedd5}\label{ships_8cpp_acc67141820b05c27253f724aff3dedd5}} 
+\index{ships.cpp@{ships.cpp}!SetAlive@{SetAlive}}
+\index{SetAlive@{SetAlive}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetAlive()}{SetAlive()}}
+{\footnotesize\ttfamily void Set\+Alive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{bool}]{b\+Alive }\end{DoxyParamCaption})}
+
+
+
+Set the aliving status for the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em b\+Alive} & True for ship alivenes, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_acb441a0cb135b9eec097279b468613fa}\label{ships_8cpp_acb441a0cb135b9eec097279b468613fa}} 
+\index{ships.cpp@{ships.cpp}!SetClass@{SetClass}}
+\index{SetClass@{SetClass}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetClass()}{SetClass()}}
+{\footnotesize\ttfamily void Set\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{en\+Ship\+Class}]{n\+Class }\end{DoxyParamCaption})}
+
+
+
+Set the ship class (small, medium, big) 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em n\+Class} & The shiip class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_afd066e8c7f14500c910c85bf7e35ab35}\label{ships_8cpp_afd066e8c7f14500c910c85bf7e35ab35}} 
+\index{ships.cpp@{ships.cpp}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{COLORREF}]{Color }\end{DoxyParamCaption})}
+
+
+
+Set the color for the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Color} & The color to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a6eebb5e296161fb1a8d977b6c4431a08}\label{ships_8cpp_a6eebb5e296161fb1a8d977b6c4431a08}} 
+\index{ships.cpp@{ships.cpp}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void Set\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Set the ship position. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Pos} & The position to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_ab2235c088785efdbf499cbd2c0e137cd}\label{ships_8cpp_ab2235c088785efdbf499cbd2c0e137cd}} 
+\index{ships.cpp@{ships.cpp}!SetRot@{SetRot}}
+\index{SetRot@{SetRot}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetRot()}{SetRot()}}
+{\footnotesize\ttfamily void Set\+Rot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{double}]{Rot }\end{DoxyParamCaption})}
+
+
+
+Set the ship rotation. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Rot} & Rotation angle in radians \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a0c6181ae5d91e286868cc4102c1cc0f5}\label{ships_8cpp_a0c6181ae5d91e286868cc4102c1cc0f5}} 
+\index{ships.cpp@{ships.cpp}!SetVel@{SetVel}}
+\index{SetVel@{SetVel}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetVel()}{SetVel()}}
+{\footnotesize\ttfamily void Set\+Vel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Set the ship velocity. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em The} & velocity value to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_aee0740a967ca628f858dcb36b1c7ea34}\label{ships_8cpp_aee0740a967ca628f858dcb36b1c7ea34}} 
+\index{ships.cpp@{ships.cpp}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{SetVisible()}{SetVisible()}}
+{\footnotesize\ttfamily void Set\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{bool}]{b\+Visible }\end{DoxyParamCaption})}
+
+
+
+Set the ship visiblity. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em b\+Visible} & True for ship visiblitiy, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ships_8cpp_a8ff00ebc885b19bf655bf873ca24a6ca}\label{ships_8cpp_a8ff00ebc885b19bf655bf873ca24a6ca}} 
+\index{ships.cpp@{ships.cpp}!Update@{Update}}
+\index{Update@{Update}!ships.cpp@{ships.cpp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_ship}{TShip}} $\ast$}]{p\+Ship,  }\item[{double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Updates by time the spaceship status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}

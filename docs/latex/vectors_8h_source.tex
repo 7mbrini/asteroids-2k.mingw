@@ -1,0 +1,45 @@
+\hypertarget{vectors_8h_source}{}\doxysection{vectors.\+h}
+\label{vectors_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/vectors.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/vectors.h}}
+\mbox{\hyperlink{vectors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_VECTORS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_VECTORS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{maths_8h}{maths.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_vector2}{TVector2}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keywordtype}{double} X, Y;}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} std::vector<TVector2> TVecPoints;}
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} std::vector<TVector2*> TVecPtrPoints;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{typedef} std::vector<TVecPoints> TVecVecPoints;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_acc9b0b8e13e7fec2662bdda71dfc4e4a}{Build}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Pt);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_acc9b0b8e13e7fec2662bdda71dfc4e4a}{Build}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Pt, \textcolor{keywordtype}{double} X = 0, \textcolor{keywordtype}{double} Y = 0);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{double} \mbox{\hyperlink{vectors_8h_a9b477a01264b28fe9a59f4eb5a48469d}{Mod}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Pt);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_a9d00c7bb32df7681f559172f430336e0}{Normalize}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Pt);}
+\DoxyCodeLine{26 \mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8h_af5b00b9c10bbfe6adf2e81b3afe1c87b}{Add}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& A, \mbox{\hyperlink{struct_t_vector2}{TVector2}}\& B);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{double} \mbox{\hyperlink{vectors_8h_a8b06ed4b3e96661d9052ae2fda41633e}{Distance}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt1, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt2);}
+\DoxyCodeLine{29 \mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8h_a02a72fcf81456139063f43c2751778c8}{Rotate}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Src, \textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_a02a72fcf81456139063f43c2751778c8}{Rotate}}(TVecPoints\& VecPts, \textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{31 \mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{vectors_8h_a7fa16e5d006d9acc675fb2143bf43808}{Translate}}(\mbox{\hyperlink{struct_t_vector2}{TVector2}}\& Src, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_a7fa16e5d006d9acc675fb2143bf43808}{Translate}}(TVecPoints\& Src, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_a02a72fcf81456139063f43c2751778c8}{Rotate}}(TVecVecPoints\& VecPts, \textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} \mbox{\hyperlink{vectors_8h_a7fa16e5d006d9acc675fb2143bf43808}{Translate}}(TVecVecPoints\& VecPts, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+
+\end{DoxyCode}

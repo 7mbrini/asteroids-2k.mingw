@@ -1,0 +1,35 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\label{utils_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/utils.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_UTILS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_UTILS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a62b761b7c3001c39809ccd8369cadf0a}{Debounce}}();}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} std::vector<int> TVecIntegers;}
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} std::vector<std::string> TVecStrings;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 std::string \mbox{\hyperlink{utils_8h_aaa263411fa8e070662b16717fe5ea732}{GetExePath}}();}
+\DoxyCodeLine{14 std::string \mbox{\hyperlink{utils_8h_a5253cf9010acf3b4ebfca3e43843d337}{GetDataPath}}();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{utils_8h_a11ccda4928ec02bc0a1ef1b8575c1c7a}{GetFileSize}}(FILE *fp);}
+\DoxyCodeLine{17 \textcolor{keywordtype}{bool} \mbox{\hyperlink{utils_8h_a96954be0b9eaf2be1906fedcfcd94770}{IsWavFile}}(std::string strFileName);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 std::string \mbox{\hyperlink{utils_8h_adcb319953198bafc16916ef333df77d6}{GetFileName}}(std::string strPath, \textcolor{keywordtype}{bool} bRemoveExt);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a51d631666b87971a4e7e382bc07bccdb}{Show}}(std::string strMsg);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a51d631666b87971a4e7e382bc07bccdb}{Show}}(TVecIntegers IntList);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a51d631666b87971a4e7e382bc07bccdb}{Show}}(TVecStrings strList);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keywordtype}{bool} \mbox{\hyperlink{utils_8h_ac6ab566aa4b7764fb0cbcaab5afab089}{IsBigEndian}}();}
+\DoxyCodeLine{26 \textcolor{keywordtype}{int} \mbox{\hyperlink{utils_8h_a3bc7b1932adff38fe8283b8ac526f0c7}{ConvertToInt}}(\textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{int} len);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{29 }
+
+\end{DoxyCode}

@@ -1,0 +1,229 @@
+\hypertarget{utils_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/utils.h File Reference}
+\label{utils_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/utils.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/utils.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{utils_8h_a094008ada9e3070d36d6dc5a8c7d3fec}\label{utils_8h_a094008ada9e3070d36d6dc5a8c7d3fec}} 
+typedef std\+::vector$<$ int $>$ {\bfseries TVec\+Integers}
+\item 
+\mbox{\Hypertarget{utils_8h_a6a541cc02e8079aa7cfd07fd0587f9f6}\label{utils_8h_a6a541cc02e8079aa7cfd07fd0587f9f6}} 
+typedef std\+::vector$<$ std\+::string $>$ {\bfseries TVec\+Strings}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{utils_8h_a62b761b7c3001c39809ccd8369cadf0a}{Debounce}} ()
+\begin{DoxyCompactList}\small\item\em Insert a delay to prevent \char`\"{}bouncing\char`\"{} effect when repeatedly pressing keys on keyboard ~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{utils_8h_aaa263411fa8e070662b16717fe5ea732}{Get\+Exe\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Gets the full path for the executable file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{utils_8h_a5253cf9010acf3b4ebfca3e43843d337}{Get\+Data\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Gets the application data folder. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{utils_8h_a11ccda4928ec02bc0a1ef1b8575c1c7a}{Get\+File\+Size}} (FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Gets the file size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{utils_8h_a96954be0b9eaf2be1906fedcfcd94770}{Is\+Wav\+File}} (std\+::string str\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Checks for WAV audo file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{utils_8h_adcb319953198bafc16916ef333df77d6}{Get\+File\+Name}} (std\+::string str\+Path, bool b\+Remove\+Ext)
+\begin{DoxyCompactList}\small\item\em Extracts the \char`\"{}name\char`\"{} from a file, without path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a51d631666b87971a4e7e382bc07bccdb}{Show}} (std\+::string str\+Msg)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a specified string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a3f20b52d281ba8d0ecb0a7aa8c5e953e}{Show}} (TVec\+Integers Int\+List)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a list of integer values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a86f15dd866cb849cf04930e3a828c5fe}{Show}} (TVec\+Strings str\+List)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a list of strings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{utils_8h_ac6ab566aa4b7764fb0cbcaab5afab089}{Is\+Big\+Endian}} ()
+\begin{DoxyCompactList}\small\item\em Checks for platform endianness. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{utils_8h_a3bc7b1932adff38fe8283b8ac526f0c7}{Convert\+To\+Int}} (char $\ast$buffer, int len)
+\begin{DoxyCompactList}\small\item\em Converts a sequence of bytes in integer, basing on endianness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_a3bc7b1932adff38fe8283b8ac526f0c7}\label{utils_8h_a3bc7b1932adff38fe8283b8ac526f0c7}} 
+\index{utils.h@{utils.h}!ConvertToInt@{ConvertToInt}}
+\index{ConvertToInt@{ConvertToInt}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{ConvertToInt()}{ConvertToInt()}}
+{\footnotesize\ttfamily int Convert\+To\+Int (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Buffer,  }\item[{int}]{n\+Len }\end{DoxyParamCaption})}
+
+
+
+Converts a sequence of bytes in integer, basing on endianness. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Buffer} & Pointer to a sequence of bytes \\
+\hline
+{\em n\+Len} & Length of sequence of bytes to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer corresponding to a sequence of n\+Len bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a62b761b7c3001c39809ccd8369cadf0a}\label{utils_8h_a62b761b7c3001c39809ccd8369cadf0a}} 
+\index{utils.h@{utils.h}!Debounce@{Debounce}}
+\index{Debounce@{Debounce}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Debounce()}{Debounce()}}
+{\footnotesize\ttfamily void Debounce (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Insert a delay to prevent \char`\"{}bouncing\char`\"{} effect when repeatedly pressing keys on keyboard ~\newline
+ 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{utils_8h_a5253cf9010acf3b4ebfca3e43843d337}\label{utils_8h_a5253cf9010acf3b4ebfca3e43843d337}} 
+\index{utils.h@{utils.h}!GetDataPath@{GetDataPath}}
+\index{GetDataPath@{GetDataPath}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{GetDataPath()}{GetDataPath()}}
+{\footnotesize\ttfamily std\+::string Get\+Data\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the application data folder. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns the path to data folder 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_aaa263411fa8e070662b16717fe5ea732}\label{utils_8h_aaa263411fa8e070662b16717fe5ea732}} 
+\index{utils.h@{utils.h}!GetExePath@{GetExePath}}
+\index{GetExePath@{GetExePath}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{GetExePath()}{GetExePath()}}
+{\footnotesize\ttfamily std\+::string Get\+Exe\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the full path for the executable file. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns the full path to the exe file name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_adcb319953198bafc16916ef333df77d6}\label{utils_8h_adcb319953198bafc16916ef333df77d6}} 
+\index{utils.h@{utils.h}!GetFileName@{GetFileName}}
+\index{GetFileName@{GetFileName}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{GetFileName()}{GetFileName()}}
+{\footnotesize\ttfamily std\+::string Get\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Path,  }\item[{bool}]{b\+Remove\+Ext }\end{DoxyParamCaption})}
+
+
+
+Extracts the \char`\"{}name\char`\"{} from a file, without path. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em str\+Path} & The full path of a file \\
+\hline
+{\em b\+Remove\+Ext} & Specifies if wants to remove extension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string containing the name of a file without the path and (optionally) extension 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a11ccda4928ec02bc0a1ef1b8575c1c7a}\label{utils_8h_a11ccda4928ec02bc0a1ef1b8575c1c7a}} 
+\index{utils.h@{utils.h}!GetFileSize@{GetFileSize}}
+\index{GetFileSize@{GetFileSize}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{GetFileSize()}{GetFileSize()}}
+{\footnotesize\ttfamily unsigned Get\+File\+Size (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Gets the file size. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & Pointer to a FILE struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the size for a specified file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_ac6ab566aa4b7764fb0cbcaab5afab089}\label{utils_8h_ac6ab566aa4b7764fb0cbcaab5afab089}} 
+\index{utils.h@{utils.h}!IsBigEndian@{IsBigEndian}}
+\index{IsBigEndian@{IsBigEndian}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{IsBigEndian()}{IsBigEndian()}}
+{\footnotesize\ttfamily bool Is\+Big\+Endian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for platform endianness. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true if the hardware platform is \char`\"{}big endian\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a96954be0b9eaf2be1906fedcfcd94770}\label{utils_8h_a96954be0b9eaf2be1906fedcfcd94770}} 
+\index{utils.h@{utils.h}!IsWavFile@{IsWavFile}}
+\index{IsWavFile@{IsWavFile}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{IsWavFile()}{IsWavFile()}}
+{\footnotesize\ttfamily bool Is\+Wav\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Checks for WAV audo file. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em str\+File\+Name} & The PCM WAV file name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the file is of PCM WAV type, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a51d631666b87971a4e7e382bc07bccdb}\label{utils_8h_a51d631666b87971a4e7e382bc07bccdb}} 
+\index{utils.h@{utils.h}!Show@{Show}}
+\index{Show@{Show}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Show (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Msg }\end{DoxyParamCaption})}
+
+
+
+Shows a Message\+Box containing a specified string. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & The message to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a3f20b52d281ba8d0ecb0a7aa8c5e953e}\label{utils_8h_a3f20b52d281ba8d0ecb0a7aa8c5e953e}} 
+\index{utils.h@{utils.h}!Show@{Show}}
+\index{Show@{Show}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Show (\begin{DoxyParamCaption}\item[{TVec\+Integers}]{Int\+List }\end{DoxyParamCaption})}
+
+
+
+Shows a Message\+Box containing a list of integer values. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Int\+List} & A vector of integers to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a86f15dd866cb849cf04930e3a828c5fe}\label{utils_8h_a86f15dd866cb849cf04930e3a828c5fe}} 
+\index{utils.h@{utils.h}!Show@{Show}}
+\index{Show@{Show}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Show (\begin{DoxyParamCaption}\item[{TVec\+Strings}]{str\+List }\end{DoxyParamCaption})}
+
+
+
+Shows a Message\+Box containing a list of strings. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em str\+List} & A vector of strings to show \\
+\hline
+\end{DoxyParams}

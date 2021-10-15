@@ -1,0 +1,302 @@
+\hypertarget{audio_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/audio.h File Reference}
+\label{audio_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/audio.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/audio.h}}
+{\ttfamily \#include $<$al/al.\+h$>$}\newline
+{\ttfamily \#include $<$al/alc.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}}
+\item 
+struct \mbox{\hyperlink{struct_t_sound_track}{TSound\+Track}}
+\item 
+struct \mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{audio_8h_ae4d3d266fb35a394c52318cf4ce2f411}\label{audio_8h_ae4d3d266fb35a394c52318cf4ce2f411}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{struct_t_sound_track}{TSound\+Track}} $>$ {\bfseries TSound\+Tracks}
+\item 
+\mbox{\Hypertarget{audio_8h_aed1da64de2d5b3f472d1fd21482bd3f1}\label{audio_8h_aed1da64de2d5b3f472d1fd21482bd3f1}} 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{struct_t_sound_track}{TSound\+Track}} $>$ {\bfseries TMap\+Sound\+Tracks}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{audio_8h_a8c6bc8030c65629ec8de9c496921bd1e}{Setup\+Sound\+Manager}} (\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} $\ast$p\+ALSystem)
+\begin{DoxyCompactList}\small\item\em Initialize the sound manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a4020d7dd3f6238fca182479125b328d3}{Cleanup\+Sound\+Manager}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Cleanup the sound manager. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{audio_8h_af05dbafb2b59c84a32bbb254eb043cba}{Get\+Master\+Volume}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Get master volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a1448cea2db39b00a0a8edf376f80c998}{Set\+Master\+Volume}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, double Volume)
+\begin{DoxyCompactList}\small\item\em Set master volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a68020f9183280a22033f4241990bd4ed}{Increase\+Master\+Volume}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Increase master volume by a predefined step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a64e389a4988544791aa4bc77c1de937e}{Decrease\+Master\+Volume}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Derease master volume by a predefined step. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{audio_8h_adc242cd5f26893fc7a64c78e9bed19aa}{Load\+The\+Sounds}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, std\+::vector$<$ std\+::string $>$ str\+Sounds)
+\begin{DoxyCompactList}\small\item\em Load sounds from a list of specified files. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_ad3796c7046f972c699abcf74198b65f8}{Free\+The\+Sounds}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Delete sound buffers and related resources. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{audio_8h_a2f6e89259aa74ff437660258f111de3f}{Load\+The\+Sound}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, std\+::string str\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Load a sound from file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a3b7b5dcf847a8bf3bc9d9a403f63ccb4}{Play\+The\+Sound}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, std\+::string str\+Sound, bool b\+Loop=false)
+\begin{DoxyCompactList}\small\item\em Play and audio track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_ab4af3dd7893838a4842d3f12eb3e0026}{Stop\+The\+Sound}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, std\+::string str\+Sound)
+\begin{DoxyCompactList}\small\item\em Stops to playing a sound source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{audio_8h_a51a8a131257960260d1f0454d371c6cc}{Stop\+All\+Sounds}} (\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Stops to playing all sound sources. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{audio_8h_ae5cc10d1202e4c540acbd4a39cf1174c}{Load\+WAV}} (std\+::string str\+File\+Name, int \&n\+Channels, int \&n\+Sample\+Rate, int \&n\+Bps, int \&n\+Size)
+\begin{DoxyCompactList}\small\item\em Load raw data from an audio file in WAV PCM format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{audio_8h_a4020d7dd3f6238fca182479125b328d3}\label{audio_8h_a4020d7dd3f6238fca182479125b328d3}} 
+\index{audio.h@{audio.h}!CleanupSoundManager@{CleanupSoundManager}}
+\index{CleanupSoundManager@{CleanupSoundManager}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{CleanupSoundManager()}{CleanupSoundManager()}}
+{\footnotesize\ttfamily void Cleanup\+Sound\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Cleanup the sound manager. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_a64e389a4988544791aa4bc77c1de937e}\label{audio_8h_a64e389a4988544791aa4bc77c1de937e}} 
+\index{audio.h@{audio.h}!DecreaseMasterVolume@{DecreaseMasterVolume}}
+\index{DecreaseMasterVolume@{DecreaseMasterVolume}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{DecreaseMasterVolume()}{DecreaseMasterVolume()}}
+{\footnotesize\ttfamily void Decrease\+Master\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Derease master volume by a predefined step. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_ad3796c7046f972c699abcf74198b65f8}\label{audio_8h_ad3796c7046f972c699abcf74198b65f8}} 
+\index{audio.h@{audio.h}!FreeTheSounds@{FreeTheSounds}}
+\index{FreeTheSounds@{FreeTheSounds}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{FreeTheSounds()}{FreeTheSounds()}}
+{\footnotesize\ttfamily void Free\+The\+Sounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Delete sound buffers and related resources. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_af05dbafb2b59c84a32bbb254eb043cba}\label{audio_8h_af05dbafb2b59c84a32bbb254eb043cba}} 
+\index{audio.h@{audio.h}!GetMasterVolume@{GetMasterVolume}}
+\index{GetMasterVolume@{GetMasterVolume}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{GetMasterVolume()}{GetMasterVolume()}}
+{\footnotesize\ttfamily double Get\+Master\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Get master volume. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value for the master volume, between 0..1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audio_8h_a68020f9183280a22033f4241990bd4ed}\label{audio_8h_a68020f9183280a22033f4241990bd4ed}} 
+\index{audio.h@{audio.h}!IncreaseMasterVolume@{IncreaseMasterVolume}}
+\index{IncreaseMasterVolume@{IncreaseMasterVolume}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{IncreaseMasterVolume()}{IncreaseMasterVolume()}}
+{\footnotesize\ttfamily void Increase\+Master\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Increase master volume by a predefined step. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_a2f6e89259aa74ff437660258f111de3f}\label{audio_8h_a2f6e89259aa74ff437660258f111de3f}} 
+\index{audio.h@{audio.h}!LoadTheSound@{LoadTheSound}}
+\index{LoadTheSound@{LoadTheSound}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{LoadTheSound()}{LoadTheSound()}}
+{\footnotesize\ttfamily bool Load\+The\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{std\+::string}]{str\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Load a sound from file. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+{\em str\+File\+Name} & Path to an audio file in WAV PCM format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audio_8h_adc242cd5f26893fc7a64c78e9bed19aa}\label{audio_8h_adc242cd5f26893fc7a64c78e9bed19aa}} 
+\index{audio.h@{audio.h}!LoadTheSounds@{LoadTheSounds}}
+\index{LoadTheSounds@{LoadTheSounds}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{LoadTheSounds()}{LoadTheSounds()}}
+{\footnotesize\ttfamily bool Load\+The\+Sounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{std\+::vector$<$ std\+::string $>$}]{str\+Sounds }\end{DoxyParamCaption})}
+
+
+
+Load sounds from a list of specified files. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+{\em str\+Sounds} & A list of sound filenames to be open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audio_8h_ae5cc10d1202e4c540acbd4a39cf1174c}\label{audio_8h_ae5cc10d1202e4c540acbd4a39cf1174c}} 
+\index{audio.h@{audio.h}!LoadWAV@{LoadWAV}}
+\index{LoadWAV@{LoadWAV}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{LoadWAV()}{LoadWAV()}}
+{\footnotesize\ttfamily char $\ast$ Load\+WAV (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+File\+Name,  }\item[{int \&}]{n\+Channels,  }\item[{int \&}]{n\+Sample\+Rate,  }\item[{int \&}]{n\+Bps,  }\item[{int \&}]{n\+Size }\end{DoxyParamCaption})}
+
+
+
+Load raw data from an audio file in WAV PCM format. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em str\+File\+Name} & The path to the file name to be open \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em n\+Channels} & The number of channels\+: 1 for mono, 2 for stereo \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em n\+Sample\+Rate} & The Sample rate for audio data \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em n\+Bps} & The bits per sample \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em n\+Size} & The size of raw audio buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the raw audio buffer data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audio_8h_a3b7b5dcf847a8bf3bc9d9a403f63ccb4}\label{audio_8h_a3b7b5dcf847a8bf3bc9d9a403f63ccb4}} 
+\index{audio.h@{audio.h}!PlayTheSound@{PlayTheSound}}
+\index{PlayTheSound@{PlayTheSound}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{PlayTheSound()}{PlayTheSound()}}
+{\footnotesize\ttfamily void Play\+The\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{std\+::string}]{str\+Sound,  }\item[{bool}]{b\+Loop }\end{DoxyParamCaption})}
+
+
+
+Play and audio track. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+{\em b\+Loop} & Flag for looping\+: true if must be played repeatedly \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_a1448cea2db39b00a0a8edf376f80c998}\label{audio_8h_a1448cea2db39b00a0a8edf376f80c998}} 
+\index{audio.h@{audio.h}!SetMasterVolume@{SetMasterVolume}}
+\index{SetMasterVolume@{SetMasterVolume}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{SetMasterVolume()}{SetMasterVolume()}}
+{\footnotesize\ttfamily void Set\+Master\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{double}]{Volume }\end{DoxyParamCaption})}
+
+
+
+Set master volume. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+{\em Volume} & Value for volume, between 0..1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_a8c6bc8030c65629ec8de9c496921bd1e}\label{audio_8h_a8c6bc8030c65629ec8de9c496921bd1e}} 
+\index{audio.h@{audio.h}!SetupSoundManager@{SetupSoundManager}}
+\index{SetupSoundManager@{SetupSoundManager}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{SetupSoundManager()}{SetupSoundManager()}}
+{\footnotesize\ttfamily bool Setup\+Sound\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} $\ast$}]{p\+ALSystem }\end{DoxyParamCaption})}
+
+
+
+Initialize the sound manager. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+ALSystem} & Pointer to \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audio_8h_a51a8a131257960260d1f0454d371c6cc}\label{audio_8h_a51a8a131257960260d1f0454d371c6cc}} 
+\index{audio.h@{audio.h}!StopAllSounds@{StopAllSounds}}
+\index{StopAllSounds@{StopAllSounds}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{StopAllSounds()}{StopAllSounds()}}
+{\footnotesize\ttfamily void Stop\+All\+Sounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Stops to playing all sound sources. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{audio_8h_ab4af3dd7893838a4842d3f12eb3e0026}\label{audio_8h_ab4af3dd7893838a4842d3f12eb3e0026}} 
+\index{audio.h@{audio.h}!StopTheSound@{StopTheSound}}
+\index{StopTheSound@{StopTheSound}!audio.h@{audio.h}}
+\doxysubsubsection{\texorpdfstring{StopTheSound()}{StopTheSound()}}
+{\footnotesize\ttfamily void Stop\+The\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{std\+::string}]{str\+Sound }\end{DoxyParamCaption})}
+
+
+
+Stops to playing a sound source. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+SM} & Pointer to the sound manager \\
+\hline
+{\em str\+Sound} & Sound source to be stopped \\
+\hline
+\end{DoxyParams}

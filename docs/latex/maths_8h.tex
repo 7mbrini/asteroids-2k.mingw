@@ -1,0 +1,122 @@
+\hypertarget{maths_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/maths.h File Reference}
+\label{maths_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/maths.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/maths.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\#define {\bfseries M\+\_\+\+PI}~3.\+14159265358979323846
+\item 
+\mbox{\Hypertarget{maths_8h_a5c0afdd9a26f856f6ed60464f15f12de}\label{maths_8h_a5c0afdd9a26f856f6ed60464f15f12de}} 
+\#define {\bfseries DEG2\+RAD}(Val)~((Val) $\ast$ M\+\_\+\+PI / 180.\+0 )
+\item 
+\mbox{\Hypertarget{maths_8h_a0b6b33438e7dc39e59eff80404e08296}\label{maths_8h_a0b6b33438e7dc39e59eff80404e08296}} 
+\#define {\bfseries RAD2\+DEG}(Val)~((Val) $\ast$ 180.\+0 / M\+\_\+\+PI )
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}\label{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}} 
+typedef std\+::vector$<$ int $>$ {\bfseries TVec\+Integers}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{maths_8h_afdbb7807f627b85facf821b0d09a47d4}{Rand\+Sign}} ()
+\begin{DoxyCompactList}\small\item\em Randomly generates a unitary value with sign. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{maths_8h_ab3f224f4bf7d7534ff4393ac16cc1e95}{Sign}} (double Val)
+\begin{DoxyCompactList}\small\item\em Gets the sign of a specified value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{maths_8h_aaa94b7f0e57eef18a2eedf8d56202ca6}{Rand}} (double Val)
+\begin{DoxyCompactList}\small\item\em Generates a random value in a specified range. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{maths_8h_a55544010f7e111a973e3b04c29084ce1}{Abs\+Rand}} (double Val)
+\begin{DoxyCompactList}\small\item\em Generates a random value in a specified range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{maths_8h_a90d6a4f346fddd16fa0f0f6545b32b3a}{Sort}} (TVec\+Integers \&Vec\+Ints)
+\begin{DoxyCompactList}\small\item\em Reorders a vector of integer values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{maths_8h_a55544010f7e111a973e3b04c29084ce1}\label{maths_8h_a55544010f7e111a973e3b04c29084ce1}} 
+\index{maths.h@{maths.h}!AbsRand@{AbsRand}}
+\index{AbsRand@{AbsRand}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{AbsRand()}{AbsRand()}}
+{\footnotesize\ttfamily double Abs\+Rand (\begin{DoxyParamCaption}\item[{double}]{Val }\end{DoxyParamCaption})}
+
+
+
+Generates a random value in a specified range. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Val} & The interval limits in which a value can be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{maths_8h_aaa94b7f0e57eef18a2eedf8d56202ca6}\label{maths_8h_aaa94b7f0e57eef18a2eedf8d56202ca6}} 
+\index{maths.h@{maths.h}!Rand@{Rand}}
+\index{Rand@{Rand}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{Rand()}{Rand()}}
+{\footnotesize\ttfamily double Rand (\begin{DoxyParamCaption}\item[{double}]{Val }\end{DoxyParamCaption})}
+
+
+
+Generates a random value in a specified range. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Val} & The interval absolute limits in which a value can be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{maths_8h_afdbb7807f627b85facf821b0d09a47d4}\label{maths_8h_afdbb7807f627b85facf821b0d09a47d4}} 
+\index{maths.h@{maths.h}!RandSign@{RandSign}}
+\index{RandSign@{RandSign}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{RandSign()}{RandSign()}}
+{\footnotesize\ttfamily int Rand\+Sign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Randomly generates a unitary value with sign. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns an +1 or -\/1 value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{maths_8h_ab3f224f4bf7d7534ff4393ac16cc1e95}\label{maths_8h_ab3f224f4bf7d7534ff4393ac16cc1e95}} 
+\index{maths.h@{maths.h}!Sign@{Sign}}
+\index{Sign@{Sign}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{Sign()}{Sign()}}
+{\footnotesize\ttfamily int Sign (\begin{DoxyParamCaption}\item[{double}]{Val }\end{DoxyParamCaption})}
+
+
+
+Gets the sign of a specified value. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns an +1 or -\/1 value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{maths_8h_a90d6a4f346fddd16fa0f0f6545b32b3a}\label{maths_8h_a90d6a4f346fddd16fa0f0f6545b32b3a}} 
+\index{maths.h@{maths.h}!Sort@{Sort}}
+\index{Sort@{Sort}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{TVec\+Integers \&}]{Vec\+Ints }\end{DoxyParamCaption})}
+
+
+
+Reorders a vector of integer values. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Vec\+Ints} & A reference to a vector of integers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Uses the Bubble Sort algorithm 
+\end{DoxyNote}

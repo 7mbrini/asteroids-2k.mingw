@@ -1,0 +1,123 @@
+\hypertarget{game_8h_source}{}\doxysection{game.\+h}
+\label{game_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/game.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_GAME\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_GAME\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{//\#include <sdl2/sdl.h>}}
+\DoxyCodeLine{11 \textcolor{comment}{//\#include <sdl2/sdl\_audio.h>}}
+\DoxyCodeLine{12 \textcolor{comment}{//\#include <sdl2/sdl\_ttf.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audio_8h}{audio.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ships_8h}{ships.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{weapons_8h}{weapons.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{asteroids_8h}{asteroids.h}}"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_record_scores}{TRecordScores}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordtype}{unsigned} nScore;}
+\DoxyCodeLine{25     std::string strName;}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} std::vector<std::string> TVecStrings;}
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} std::vector<TRecordScores> TVecRecordScores;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_game}{TGame}}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{struct_t_video_manager}{TVideoManager}}* pVM;}
+\DoxyCodeLine{34     \mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} bRun, bPause, bGameOver;}
+\DoxyCodeLine{37     TVecPtrShips pShips;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     TVecPtrMissiles pMissiles;}
+\DoxyCodeLine{40     TVecPtrAsteroids pAsteroids;}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} nScore, nLevel, nDifficulty, nLives, nBonusCount;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     TVecStrings strHelp;}
+\DoxyCodeLine{44                                 \textcolor{comment}{// best score dialog}}
+\DoxyCodeLine{45     WCHAR pBestScoresName[256];}
+\DoxyCodeLine{46     TVecRecordScores BestScores;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{unsigned} nDlgRetVal;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} bBestScoreDlgActive;}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a77daae0e41698cd30c2db5ffadffc671}{Setup}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \mbox{\hyperlink{struct_t_video_manager}{TVideoManager}}* pVM, \mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a4c8a63fe06d3743cd88195cb831c70dc}{Cleanup}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{55 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_af8bbde2c5b5648635eb4bc1cb4f95440}{Restart}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_acf53e6690591a02a67e98dc06cd9599a}{GameOver}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a14c8870379cbb403a08c5fe1ebabf1fa}{Run}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{60 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a24817ae803e1a75b6c9b1f38fbf8f300}{ShowInfo}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{61 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a9483919817c251ea8e3ad8f4d0486f22}{NextLevel}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a19cbbcad0b69e1cedd714d47cf7eaa9e}{IsSafetyPos}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a33dd73f5c38a7d890e333d03b0e14e01}{ShotTheMissile}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \mbox{\hyperlink{struct_t_ship}{TShip}}* pShip);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_ae00025f0d4bfdf16d836dd2fd1ae7905}{GetClientSize}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \textcolor{keywordtype}{unsigned}\& nW, \textcolor{keywordtype}{unsigned}\& nH);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_abc702be90c01053ff3f900b9ed379f01}{EndTheGame}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{70 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_affce4fa1cb7c7bf361bb4f245dcc3b05}{PauseTheGame}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{71 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_aea6524e89559b073255ed6f281606b91}{IsPausing}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a72ee9032592b81cefc04627fb2a42156}{IsRunning}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{74 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a274c549af6e11af4094634617b6c4a72}{IsGameOver}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_ae33a616c6d84e3829e0a1dab01d9c01f}{LoadTheHelp}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{77 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a33e74f13af0692b30db06aa4206cdb21}{LoadTheSounds}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a2147282dec6c4e8363a4abd6382f7b9a}{IsBestScore}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{80 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_acfa84146cd29adc56bc11aa02a06947a}{RegisterBestScore}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{81 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a559ac29fb6bb1073e5788c86d6be3b84}{SaveBestScores}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{82 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a5d84486f81cfbf1a097f567a27df53ad}{LoadTheBestScores}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \textcolor{keywordtype}{char}* pFileName);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a42ae38fb4777672a3c27ba1efce2cfab}{BuildTheFonts}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{85 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a2b219132120743de6c943f501427a461}{BuildTheAsteroids}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \textcolor{keywordtype}{unsigned} nCount);}
+\DoxyCodeLine{86 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a396ed694e31de9416a3346fdb24a4fbf}{DeleteAsteroids}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a80e50656e9c1f8a61d5678067bf7922e}{BuildTheShips}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a93478118ba2f298438a2fca4cd4f4cc8}{ForceInsideLimits}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{91 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a009c1e72a3b8f2552514fecf1774f9b6}{IsInsideGameArea}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a56c8df170e499daebe9a8588f3a671fc}{DeleteShips}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a9e43e0c5fe96925c5113e61435f534e3}{LevelHandler}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{96 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_aeb5f33af6fdfda668e6bf658f3d8a73b}{BonusHandler}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{97 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_afeea624e8778d6283406c2153ab87424}{CollisionHandler}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a93e290f460af2aaf55b40450830b8e17}{Collide}}(\mbox{\hyperlink{struct_t_missile}{TMissile}}* pMissile, \mbox{\hyperlink{struct_t_ship}{TShip}}* pShip);}
+\DoxyCodeLine{100 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_a93e290f460af2aaf55b40450830b8e17}{Collide}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid, \mbox{\hyperlink{struct_t_ship}{TShip}}* pShip);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{keywordtype}{bool} \mbox{\hyperlink{game_8h_abf27d8a036e89ee7d2d2f6d74c21715c}{IsInputDialog}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_afc297285dbdd95d13e8e69f23f413d15}{GameOverHandler}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a03b433ea5e6f93bdaa496a3e4043113c}{AlienShipsHandler}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 HWND \mbox{\hyperlink{game_8h_afb0699384fcc15647c16188630d2acd7}{GetMainWnd}}(\mbox{\hyperlink{struct_t_game}{TGame}}* pGame);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#ifndef \_MSC\_VER}}
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} Swap(\mbox{\hyperlink{struct_t_record_scores}{TRecordScores}}\& T1, \mbox{\hyperlink{struct_t_record_scores}{TRecordScores}}\& T2);}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_ad8c6315a81da8cea4e1245323d1e1d74}{Sort}}(TVecRecordScores\& Scores, \textcolor{keywordtype}{bool} bAscending=\textcolor{keyword}{true});}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{117 }
+
+\end{DoxyCode}

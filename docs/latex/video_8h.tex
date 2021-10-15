@@ -1,0 +1,68 @@
+\hypertarget{video_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/video.h File Reference}
+\label{video_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/video.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/video.h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{video_8h_abacda3d4cb1dbaa10a195749969b838d}{Setup\+Video\+Manager}} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\begin{DoxyCompactList}\small\item\em Initialize the video system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{video_8h_a7918725512841062e255a7a95d312ace}\label{video_8h_a7918725512841062e255a7a95d312ace}} 
+void {\bfseries Cleanup\+Video\+Manager} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\item 
+\mbox{\Hypertarget{video_8h_a65e341a7cf3d2c3e1a3b4f0aba2d346e}\label{video_8h_a65e341a7cf3d2c3e1a3b4f0aba2d346e}} 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} {\bfseries Get\+Screen\+Center} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\item 
+\mbox{\Hypertarget{video_8h_a6c850c8ea921ff8efc3837e8438654d2}\label{video_8h_a6c850c8ea921ff8efc3837e8438654d2}} 
+void {\bfseries Draw\+Lines} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, TVec\+Points \&Pts, int n\+Line\+Width, COLORREF Color, bool b\+Closed=false)
+\item 
+\mbox{\Hypertarget{video_8h_ac9a6b7a7a0f7c6537abe5497df68347a}\label{video_8h_ac9a6b7a7a0f7c6537abe5497df68347a}} 
+void {\bfseries Draw\+Lines} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, TVec\+Vec\+Points \&Pts, int n\+Line\+Width, COLORREF Color, bool b\+Closed=false)
+\item 
+\mbox{\Hypertarget{video_8h_a0382c169b606787e15001abb288752ab}\label{video_8h_a0382c169b606787e15001abb288752ab}} 
+void {\bfseries Draw\+Point} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{struct_t_vector2}{TVector2}} \&Pt, COLORREF Color)
+\item 
+\mbox{\Hypertarget{video_8h_af476c0801d1d5be15cd27b56912f0f18}\label{video_8h_af476c0801d1d5be15cd27b56912f0f18}} 
+void {\bfseries Clear\+Screen} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, COLORREF Color)
+\item 
+\mbox{\Hypertarget{video_8h_a9f6eb4b90ce612b14c1aba615ce8db68}\label{video_8h_a9f6eb4b90ce612b14c1aba615ce8db68}} 
+bool {\bfseries Load\+Font} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, std\+::string str\+Font\+Path, std\+::wstring str\+Name, int n\+Size)
+\item 
+\mbox{\Hypertarget{video_8h_a732ba9370bedb73b49031e3e38fbbdd2}\label{video_8h_a732ba9370bedb73b49031e3e38fbbdd2}} 
+void {\bfseries Draw\+Text} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, char $\ast$p\+Text, int nX, int nY, COLORREF n\+Color=RGB(255, 255, 255), UINT n\+Align=TA\+\_\+\+CENTER)
+\item 
+\mbox{\Hypertarget{video_8h_aa3e3b35ad5e566f7a0734b01d1bf67e4}\label{video_8h_aa3e3b35ad5e566f7a0734b01d1bf67e4}} 
+void {\bfseries Draw\+Text} (\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, std\+::vector$<$ std\+::string $>$ String\+List, int nX, int nY, int n\+TextH, COLORREF n\+Color=RGB(255, 255, 255), UINT n\+Align=TA\+\_\+\+CENTER)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8h_abacda3d4cb1dbaa10a195749969b838d}\label{video_8h_abacda3d4cb1dbaa10a195749969b838d}} 
+\index{video.h@{video.h}!SetupVideoManager@{SetupVideoManager}}
+\index{SetupVideoManager@{SetupVideoManager}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{SetupVideoManager()}{SetupVideoManager()}}
+{\footnotesize\ttfamily bool Setup\+Video\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM }\end{DoxyParamCaption})}
+
+
+
+Initialize the video system. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Video\+Manager} & Pointer to \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}

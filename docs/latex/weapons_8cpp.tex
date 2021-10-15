@@ -1,0 +1,166 @@
+\hypertarget{weapons_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/weapons.cpp File Reference}
+\label{weapons_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/weapons.cpp@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/weapons.cpp}}
+
+
+Weapons modelling.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}weapons.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{weapons_8cpp_ae5174a5ae679654022e32e575d3ea19b}{Build}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile, \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weapons_8cpp_afcc76aac8a375690a61f84b4db3b36de}{Build}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile, \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{weapons_8cpp_ad279554b211ec404890b2de1145ed86d}{Get\+Pos}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile)
+\begin{DoxyCompactList}\small\item\em Gets the missile position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{weapons_8cpp_a22e2e561e8783a9c68919037e68780fc}{Is\+Armed}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile)
+\begin{DoxyCompactList}\small\item\em Gets the status of missile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weapons_8cpp_a69926c27d90e6e1235253d8123033000}{Arm}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Arms the missile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weapons_8cpp_a4fe59fc0890eba1fd905d494bb2c2998}{Update}} (\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$p\+Missile, double Dt)
+\begin{DoxyCompactList}\small\item\em Updates by time the missile status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weapons_8cpp_a92a1274b62ae44e086233ddb4667bfab}{Clear}} (TVec\+Ptr\+Missiles \&Missiles)
+\begin{DoxyCompactList}\small\item\em Deletes a bunch of missiles referenced by a vector of pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Weapons modelling. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{weapons_8cpp_a69926c27d90e6e1235253d8123033000}\label{weapons_8cpp_a69926c27d90e6e1235253d8123033000}} 
+\index{weapons.cpp@{weapons.cpp}!Arm@{Arm}}
+\index{Arm@{Arm}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{Arm()}{Arm()}}
+{\footnotesize\ttfamily void Arm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Arms the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+{\em Pos} & The position of the missile \\
+\hline
+{\em Vel} & The velocity of the missile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{weapons_8cpp_ae5174a5ae679654022e32e575d3ea19b}\label{weapons_8cpp_ae5174a5ae679654022e32e575d3ea19b}} 
+\index{weapons.cpp@{weapons.cpp}!Build@{Build}}
+\index{Build@{Build}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile,  }\item[{\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{weapons_8cpp_afcc76aac8a375690a61f84b4db3b36de}\label{weapons_8cpp_afcc76aac8a375690a61f84b4db3b36de}} 
+\index{weapons.cpp@{weapons.cpp}!Build@{Build}}
+\index{Build@{Build}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile,  }\item[{\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+{\em Pos} & Initial position of the missile \\
+\hline
+{\em Vel} & Initial velocity of the missile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{weapons_8cpp_a92a1274b62ae44e086233ddb4667bfab}\label{weapons_8cpp_a92a1274b62ae44e086233ddb4667bfab}} 
+\index{weapons.cpp@{weapons.cpp}!Clear@{Clear}}
+\index{Clear@{Clear}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Clear (\begin{DoxyParamCaption}\item[{TVec\+Ptr\+Missiles \&}]{Missiles }\end{DoxyParamCaption})}
+
+
+
+Deletes a bunch of missiles referenced by a vector of pointers. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Missiles} & Referernce to a list of pointers to missiles \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{weapons_8cpp_ad279554b211ec404890b2de1145ed86d}\label{weapons_8cpp_ad279554b211ec404890b2de1145ed86d}} 
+\index{weapons.cpp@{weapons.cpp}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Get\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile }\end{DoxyParamCaption})}
+
+
+
+Gets the missile position. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the missile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{weapons_8cpp_a22e2e561e8783a9c68919037e68780fc}\label{weapons_8cpp_a22e2e561e8783a9c68919037e68780fc}} 
+\index{weapons.cpp@{weapons.cpp}!IsArmed@{IsArmed}}
+\index{IsArmed@{IsArmed}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{IsArmed()}{IsArmed()}}
+{\footnotesize\ttfamily bool Is\+Armed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile }\end{DoxyParamCaption})}
+
+
+
+Gets the status of missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the missile is armed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{weapons_8cpp_a4fe59fc0890eba1fd905d494bb2c2998}\label{weapons_8cpp_a4fe59fc0890eba1fd905d494bb2c2998}} 
+\index{weapons.cpp@{weapons.cpp}!Update@{Update}}
+\index{Update@{Update}!weapons.cpp@{weapons.cpp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_missile}{TMissile}} $\ast$}]{p\+Missile,  }\item[{double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Updates by time the missile status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Missile} & Pointer to the missile data structure \\
+\hline
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}

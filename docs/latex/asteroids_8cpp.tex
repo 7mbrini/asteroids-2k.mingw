@@ -1,0 +1,236 @@
+\hypertarget{asteroids_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/asteroids.cpp File Reference}
+\label{asteroids_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids.cpp@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids.cpp}}
+
+
+Asteroids modelling.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}maths.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}asteroids.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{asteroids_8cpp_a1dcf4af60a8c57ae518ab94352b7d8ec}\label{asteroids_8cpp_a1dcf4af60a8c57ae518ab94352b7d8ec}} 
+\#define {\bfseries ASTEROID\+\_\+\+MAXVERTS}~16
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{asteroids_8cpp_a42c9e6e288e9ea55aa7ef580c983fdce}{Build}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, \mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, en\+Asteroid\+Class n\+Class, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel, double Radius)
+\begin{DoxyCompactList}\small\item\em Builds the asteroid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{asteroids_8cpp_a4f900d32eae2cf59190be62ef3fc3e6a}{Is\+Alive}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Returns the asteroid status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{asteroids_8cpp_a85e93c846adffeb0000c2d151dc58c3c}{Collide}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt)
+\begin{DoxyCompactList}\small\item\em Checks if the asteroid is colliding in a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids_8cpp_a00dd2817bf44b3f5b39dd7e9c577eb70}{Crash}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Marks the availability of the asteroid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids_8cpp_a85a2328487b16889d60fc7475e7796aa}{Set\+Pos}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the asteroid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{asteroids_8cpp_aeae1865500a1bbf7fdb9ad6f35d4dd62}{Get\+Pos}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Gets the position of the asteroid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{asteroids_8cpp_aa85abeab49ad0258eeafa58cb1dfb016}{Get\+Vel}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Gets the veclocity of the asteroid. \end{DoxyCompactList}\item 
+en\+Asteroid\+Class \mbox{\hyperlink{asteroids_8cpp_a1030934afb58b687f86b06eee770c047}{Get\+Class}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Gets the class of the asteroid. \end{DoxyCompactList}\item 
+TVec\+Points \mbox{\hyperlink{asteroids_8cpp_a91d85dde088ce20e688775551e80113f}{Rand\+Shape}} (double Size)
+\begin{DoxyCompactList}\small\item\em Generates randomly an asteroid shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids_8cpp_ade47a6d069420926956d5025efcd5387}{Update}} (\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, double Dt)
+\begin{DoxyCompactList}\small\item\em Updates by time the asteroid status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Asteroids modelling. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{asteroids_8cpp_a42c9e6e288e9ea55aa7ef580c983fdce}\label{asteroids_8cpp_a42c9e6e288e9ea55aa7ef580c983fdce}} 
+\index{asteroids.cpp@{asteroids.cpp}!Build@{Build}}
+\index{Build@{Build}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily void Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid,  }\item[{\mbox{\hyperlink{struct_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{en\+Asteroid\+Class}]{n\+Class,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Vel,  }\item[{double}]{Radius }\end{DoxyParamCaption})}
+
+
+
+Builds the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+{\em n\+Class} & Class identifier of the asteroid (e.\+g.\+: big, medium, small) \\
+\hline
+{\em Pos} & The initial position of the asteroid \\
+\hline
+{\em Radius} & The size of the asteroid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{asteroids_8cpp_a85e93c846adffeb0000c2d151dc58c3c}\label{asteroids_8cpp_a85e93c846adffeb0000c2d151dc58c3c}} 
+\index{asteroids.cpp@{asteroids.cpp}!Collide@{Collide}}
+\index{Collide@{Collide}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}}
+{\footnotesize\ttfamily bool Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pt }\end{DoxyParamCaption})}
+
+
+
+Checks if the asteroid is colliding in a specified position. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the asteroid is colliding, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids_8cpp_a00dd2817bf44b3f5b39dd7e9c577eb70}\label{asteroids_8cpp_a00dd2817bf44b3f5b39dd7e9c577eb70}} 
+\index{asteroids.cpp@{asteroids.cpp}!Crash@{Crash}}
+\index{Crash@{Crash}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{Crash()}{Crash()}}
+{\footnotesize\ttfamily void Crash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})}
+
+
+
+Marks the availability of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{asteroids_8cpp_a1030934afb58b687f86b06eee770c047}\label{asteroids_8cpp_a1030934afb58b687f86b06eee770c047}} 
+\index{asteroids.cpp@{asteroids.cpp}!GetClass@{GetClass}}
+\index{GetClass@{GetClass}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{GetClass()}{GetClass()}}
+{\footnotesize\ttfamily en\+Asteroid\+Class Get\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})}
+
+
+
+Gets the class of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The clas of the asteroid (i.\+e. small, medium or big) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids_8cpp_aeae1865500a1bbf7fdb9ad6f35d4dd62}\label{asteroids_8cpp_aeae1865500a1bbf7fdb9ad6f35d4dd62}} 
+\index{asteroids.cpp@{asteroids.cpp}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Get\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})}
+
+
+
+Gets the position of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids_8cpp_aa85abeab49ad0258eeafa58cb1dfb016}\label{asteroids_8cpp_aa85abeab49ad0258eeafa58cb1dfb016}} 
+\index{asteroids.cpp@{asteroids.cpp}!GetVel@{GetVel}}
+\index{GetVel@{GetVel}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{GetVel()}{GetVel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_vector2}{TVector2}} Get\+Vel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})}
+
+
+
+Gets the veclocity of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The velocity of the asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids_8cpp_a4f900d32eae2cf59190be62ef3fc3e6a}\label{asteroids_8cpp_a4f900d32eae2cf59190be62ef3fc3e6a}} 
+\index{asteroids.cpp@{asteroids.cpp}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool Is\+Alive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})}
+
+
+
+Returns the asteroid status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the asteroid is available, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids_8cpp_a91d85dde088ce20e688775551e80113f}\label{asteroids_8cpp_a91d85dde088ce20e688775551e80113f}} 
+\index{asteroids.cpp@{asteroids.cpp}!RandShape@{RandShape}}
+\index{RandShape@{RandShape}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{RandShape()}{RandShape()}}
+{\footnotesize\ttfamily TVec\+Points Rand\+Shape (\begin{DoxyParamCaption}\item[{double}]{Size }\end{DoxyParamCaption})}
+
+
+
+Generates randomly an asteroid shape. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Size} & The size of the asteroid to be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{asteroids_8cpp_a85a2328487b16889d60fc7475e7796aa}\label{asteroids_8cpp_a85a2328487b16889d60fc7475e7796aa}} 
+\index{asteroids.cpp@{asteroids.cpp}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void Set\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid,  }\item[{\mbox{\hyperlink{struct_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+{\em Pos} & The position to be set for the asteroid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{asteroids_8cpp_ade47a6d069420926956d5025efcd5387}\label{asteroids_8cpp_ade47a6d069420926956d5025efcd5387}} 
+\index{asteroids.cpp@{asteroids.cpp}!Update@{Update}}
+\index{Update@{Update}!asteroids.cpp@{asteroids.cpp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid,  }\item[{double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Updates by time the asteroid status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid data structure \\
+\hline
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}

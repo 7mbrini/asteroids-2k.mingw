@@ -1,0 +1,54 @@
+\hypertarget{asteroids_8h_source}{}\doxysection{asteroids.\+h}
+\label{asteroids_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids.h@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids.h}}
+\mbox{\hyperlink{asteroids_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_ASTEROIDS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_ASTEROIDS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{//\#include <sdl2/sdl.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vectors_8h}{vectors.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{enum} enAsteroidClass \{ acBig, acMedium, acSmall \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} bAlive;}
+\DoxyCodeLine{21     COLORREF Color;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{double} Radius, Rot, DRot;}
+\DoxyCodeLine{23     TVecPoints Shape;}
+\DoxyCodeLine{24     \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, Vel, Acc;}
+\DoxyCodeLine{25     \mbox{\hyperlink{struct_t_video_manager}{TVideoManager}}* pVM;}
+\DoxyCodeLine{26     enAsteroidClass nClass;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} std::vector<TAsteroid> TVecAsteroids;}
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} std::vector<TAsteroid*> TVecPtrAsteroids;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keywordtype}{bool} \mbox{\hyperlink{asteroids_8h_a85e93c846adffeb0000c2d151dc58c3c}{Collide}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pt);}
+\DoxyCodeLine{33 \textcolor{keywordtype}{bool} \mbox{\hyperlink{asteroids_8h_a4f900d32eae2cf59190be62ef3fc3e6a}{IsAlive}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{asteroids_8h_a00dd2817bf44b3f5b39dd7e9c577eb70}{Crash}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} \mbox{\hyperlink{asteroids_8h_a85a2328487b16889d60fc7475e7796aa}{SetPos}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{37 \mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{asteroids_8h_aeae1865500a1bbf7fdb9ad6f35d4dd62}{GetPos}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid);}
+\DoxyCodeLine{38 \mbox{\hyperlink{struct_t_vector2}{TVector2}} \mbox{\hyperlink{asteroids_8h_aa85abeab49ad0258eeafa58cb1dfb016}{GetVel}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid);}
+\DoxyCodeLine{39 enAsteroidClass \mbox{\hyperlink{asteroids_8h_a1030934afb58b687f86b06eee770c047}{GetClass}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{asteroids_8h_a62392c5cc35139b55520dbd9d0b7f55c}{Update}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid, \textcolor{keywordtype}{double} DeltaT);}
+\DoxyCodeLine{42 TVecPoints \mbox{\hyperlink{asteroids_8h_a91d85dde088ce20e688775551e80113f}{RandShape}}(\textcolor{keywordtype}{double} Size);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{asteroids_8h_a217173e5547bab734a356badb1a95983}{Build}}(\mbox{\hyperlink{struct_t_asteroid}{TAsteroid}}* pAsteroid, \mbox{\hyperlink{struct_t_video_manager}{TVideoManager}}* VideoManager,}
+\DoxyCodeLine{45     enAsteroidClass nClass, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{struct_t_vector2}{TVector2}} Vel, \textcolor{keywordtype}{double} Radius);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{48 }
+
+\end{DoxyCode}

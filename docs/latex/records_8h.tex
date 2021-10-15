@@ -1,0 +1,43 @@
+\hypertarget{records_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k/asteroids-\/2k/records.h File Reference}
+\label{records_8h}\index{Z:/F/dev/jobs/asteroids-\/2k/asteroids-\/2k/records.h@{Z:/F/dev/jobs/asteroids-\/2k/asteroids-\/2k/records.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_record}{TRecord}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{records_8h_ae50106e1cb1735bd631a54a4cf4d686d}\label{records_8h_ae50106e1cb1735bd631a54a4cf4d686d}} 
+typedef vector$<$ \mbox{\hyperlink{struct_t_record}{TRecord}} $>$ {\bfseries TVec\+Records}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{records_8h_a52ddb3bd4189d6ccddc7070d5d38bc0c}{Load\+The\+Records}} (char $\ast$p\+File\+Name, TVec\+Records \&Records)
+\begin{DoxyCompactList}\small\item\em Load the records from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{records_8h_a52ddb3bd4189d6ccddc7070d5d38bc0c}\label{records_8h_a52ddb3bd4189d6ccddc7070d5d38bc0c}} 
+\index{records.h@{records.h}!LoadTheRecords@{LoadTheRecords}}
+\index{LoadTheRecords@{LoadTheRecords}!records.h@{records.h}}
+\doxysubsubsection{\texorpdfstring{LoadTheRecords()}{LoadTheRecords()}}
+{\footnotesize\ttfamily bool Load\+The\+Records (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name,  }\item[{TVec\+Records \&}]{Records }\end{DoxyParamCaption})}
+
+
+
+Load the records from file. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+File\+Name} & Pointer to the filename string \\
+\hline
+{\em Records} & Vector of \mbox{\hyperlink{struct_t_record}{TRecord}} data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if any error occur, true otherwise 
+\end{DoxyReturn}

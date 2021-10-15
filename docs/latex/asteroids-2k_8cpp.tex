@@ -1,0 +1,201 @@
+\hypertarget{asteroids-2k_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.mingw.\+gdi/asteroids-\/2k/src/asteroids-\/2k.cpp File Reference}
+\label{asteroids-2k_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids-\/2k.cpp@{Z:/F/dev/jobs/asteroids-\/2k.mingw.gdi/asteroids-\/2k/src/asteroids-\/2k.cpp}}
+
+
+Asteroids-\/2k main.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$winuser.\+h$>$}\newline
+{\ttfamily \#include $<$commdlg.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ships.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maths.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resource.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_a24d301bc783d269b9ba788c212c32958}\label{asteroids-2k_8cpp_a24d301bc783d269b9ba788c212c32958}} 
+\#define {\bfseries ID\+\_\+\+TIMER}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+LRESULT CALLBACK \mbox{\hyperlink{asteroids-2k_8cpp_a30a1e3b0304f1b083637664cbda94e72}{Wnd\+Proc}} (HWND h\+Wnd, UINT message, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Window Procedure\+: processes messages for the main window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{asteroids-2k_8cpp_aff4aca48e0579adfee60aecf4f0466f3}{Setup}} (HWND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em Setting-\/up the application. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asteroids-2k_8cpp_a770932a3ab3d90fe5c1669771a6e59a0}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleaning-\/up the application ks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids-2k_8cpp_ac4d999e70c5f3ee65ca98919c76a18ce}{Keyboard\+Handler}} (WPARAM n\+Key)
+\item 
+void \mbox{\hyperlink{asteroids-2k_8cpp_a926f6829a023047946c065e97290735b}{Keyboard\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids-2k_8cpp_ad0ea786d04f2fd9142111e52c7c00714}{Force\+To\+FPS}} (unsigned n\+FPS)
+\begin{DoxyCompactList}\small\item\em Force the execution speed to a specified framerate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{asteroids-2k_8cpp_a153a5fd8946b6ab9fd9b725759fffe5e}{Main\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Main application loop. \end{DoxyCompactList}\item 
+int WINAPI \mbox{\hyperlink{asteroids-2k_8cpp_a649028f00e62144f15f268d14bc6dae0}{Win\+Main}} (\+\_\+\+In\+\_\+ HINSTANCE h\+Instance, \+\_\+\+In\+\_\+opt\+\_\+ HINSTANCE h\+Prev\+Instance, \+\_\+\+In\+\_\+ LPSTR lp\+Cmd\+Line, \+\_\+\+In\+\_\+ int n\+Cmd\+Show)
+\begin{DoxyCompactList}\small\item\em The Win32 application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_a75d467b10d833fa85483d856581b0be2}\label{asteroids-2k_8cpp_a75d467b10d833fa85483d856581b0be2}} 
+HWND {\bfseries g\+\_\+h\+Main\+Wnd} = 0
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_af03f36c7876ed17a936f00434a9236c4}\label{asteroids-2k_8cpp_af03f36c7876ed17a936f00434a9236c4}} 
+HINSTANCE {\bfseries g\+\_\+h\+Inst} = 0
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_a95e79243db457ddf6f8bb5fbe764b1ee}\label{asteroids-2k_8cpp_a95e79243db457ddf6f8bb5fbe764b1ee}} 
+\mbox{\hyperlink{struct_t_game}{TGame}} $\ast$ {\bfseries g\+\_\+p\+Game} = nullptr
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_a7663b771fba9b1a09bcf23a7029c851b}\label{asteroids-2k_8cpp_a7663b771fba9b1a09bcf23a7029c851b}} 
+static TCHAR {\bfseries sz\+Title} \mbox{[}$\,$\mbox{]} = \+\_\+T(APPNAME)
+\item 
+\mbox{\Hypertarget{asteroids-2k_8cpp_a1f4727dd08e6e16acf2d7deca72d7e77}\label{asteroids-2k_8cpp_a1f4727dd08e6e16acf2d7deca72d7e77}} 
+static TCHAR {\bfseries sz\+Window\+Class} \mbox{[}$\,$\mbox{]} = \+\_\+T(\char`\"{}Asteroids-\/2k\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Asteroids-\/2k main. 
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{asteroids-2k_8cpp_a770932a3ab3d90fe5c1669771a6e59a0}\label{asteroids-2k_8cpp_a770932a3ab3d90fe5c1669771a6e59a0}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily int Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleaning-\/up the application ks. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{asteroids-2k_8cpp_ad0ea786d04f2fd9142111e52c7c00714}\label{asteroids-2k_8cpp_ad0ea786d04f2fd9142111e52c7c00714}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!ForceToFPS@{ForceToFPS}}
+\index{ForceToFPS@{ForceToFPS}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{ForceToFPS()}{ForceToFPS()}}
+{\footnotesize\ttfamily void Force\+To\+FPS (\begin{DoxyParamCaption}\item[{unsigned}]{n\+FPS }\end{DoxyParamCaption})}
+
+
+
+Force the execution speed to a specified framerate. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em n\+FPS} & The value of Frames per Second to be forced to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{asteroids-2k_8cpp_a926f6829a023047946c065e97290735b}\label{asteroids-2k_8cpp_a926f6829a023047946c065e97290735b}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!KeyboardHandler@{KeyboardHandler}}
+\index{KeyboardHandler@{KeyboardHandler}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{KeyboardHandler()}{KeyboardHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Keyboard\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard handler. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyNote}{Note}
+Uses Get\+Asynk\+Key\+State() function instead of WM\+\_\+\+KEYDOWN event handler so that can handle multiple keys pressed simultaneously 
+\end{DoxyNote}
+\mbox{\Hypertarget{asteroids-2k_8cpp_ac4d999e70c5f3ee65ca98919c76a18ce}\label{asteroids-2k_8cpp_ac4d999e70c5f3ee65ca98919c76a18ce}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!KeyboardHandler@{KeyboardHandler}}
+\index{KeyboardHandler@{KeyboardHandler}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{KeyboardHandler()}{KeyboardHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Keyboard\+Handler (\begin{DoxyParamCaption}\item[{WPARAM}]{n\+Key }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ @nop For debug only purpose
+
+The right syntax for windres is\+: windres resource.\+rc -\/o resource.\+res -\/F pe-\/x86-\/64 -\/O coff \mbox{\Hypertarget{asteroids-2k_8cpp_a153a5fd8946b6ab9fd9b725759fffe5e}\label{asteroids-2k_8cpp_a153a5fd8946b6ab9fd9b725759fffe5e}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!MainLoop@{MainLoop}}
+\index{MainLoop@{MainLoop}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{MainLoop()}{MainLoop()}}
+{\footnotesize\ttfamily void Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main application loop. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{asteroids-2k_8cpp_aff4aca48e0579adfee60aecf4f0466f3}\label{asteroids-2k_8cpp_aff4aca48e0579adfee60aecf4f0466f3}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!Setup@{Setup}}
+\index{Setup@{Setup}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily bool Setup (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+Setting-\/up the application. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & Handle to main window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asteroids-2k_8cpp_a649028f00e62144f15f268d14bc6dae0}\label{asteroids-2k_8cpp_a649028f00e62144f15f268d14bc6dae0}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!WinMain@{WinMain}}
+\index{WinMain@{WinMain}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{WinMain()}{WinMain()}}
+{\footnotesize\ttfamily int WINAPI Win\+Main (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ HINSTANCE}]{h\+Instance,  }\item[{\+\_\+\+In\+\_\+opt\+\_\+ HINSTANCE}]{h\+Prev\+Instance,  }\item[{\+\_\+\+In\+\_\+ LPSTR}]{lp\+Cmd\+Line,  }\item[{\+\_\+\+In\+\_\+ int}]{n\+Cmd\+Show }\end{DoxyParamCaption})}
+
+
+
+The Win32 application entry point. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em h\+Instance} & Handle to current application instance \\
+\hline
+{\em h\+Prev\+Instance} & Handle to previous application instance \\
+\hline
+{\em lp\+Cmd\+Line} & Pointer to the application command line string \\
+\hline
+{\em n\+Cmd\+Show} & Specifies how the main window must be visualized \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+h\+Prev\+Instance is for compatibility only, obsolete in Win32 
+\end{DoxyNote}
+\mbox{\Hypertarget{asteroids-2k_8cpp_a30a1e3b0304f1b083637664cbda94e72}\label{asteroids-2k_8cpp_a30a1e3b0304f1b083637664cbda94e72}} 
+\index{asteroids-\/2k.cpp@{asteroids-\/2k.cpp}!WndProc@{WndProc}}
+\index{WndProc@{WndProc}!asteroids-\/2k.cpp@{asteroids-\/2k.cpp}}
+\doxysubsubsection{\texorpdfstring{WndProc()}{WndProc()}}
+{\footnotesize\ttfamily LRESULT CALLBACK Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd,  }\item[{UINT}]{message,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+Window Procedure\+: processes messages for the main window. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & The handle to the window to which Wnd\+Proc is referencing \\
+\hline
+{\em message} & The message to be handled \\
+\hline
+{\em w\+Param} & The w\+Param of the message \\
+\hline
+{\em l\+Param} & The l\+Param of the message \\
+\hline
+\end{DoxyParams}

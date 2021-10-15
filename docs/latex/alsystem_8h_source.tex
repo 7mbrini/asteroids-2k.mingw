@@ -1,0 +1,62 @@
+\hypertarget{alsystem_8h_source}{}\doxysection{alsystem.\+h}
+\label{alsystem_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/alsystem.h@{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/alsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <al/al.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <al/alc.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     ALCcontext *pAlcContext;}
+\DoxyCodeLine{16     ALCdevice *pAlcDevice;}
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_track}{TSoundTrack}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     std::string strName;}
+\DoxyCodeLine{22     ALuint nBufferId, nSourceId;}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{typedef} std::vector<TSoundTrack> TSoundTracks;}
+\DoxyCodeLine{26 \textcolor{keyword}{typedef} std::map< std::string, TSoundTrack > TMapSoundTracks;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem;}
+\DoxyCodeLine{31     TMapSoundTracks SoundTracks;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{bool} InitOpenAL(\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keywordtype}{double} GetMasterVolume();}
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} SetMasterVolume(\textcolor{keywordtype}{double} Volume);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} IncreaseMasterVolume();}
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} DecreaseMasterVolume();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keywordtype}{bool} LoadTheSounds(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::vector<std::string> strSounds);}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} FreeTheSounds(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{bool} LoadTheSound(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strFileName);}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} PlayTheSound(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound, \textcolor{keywordtype}{bool} bLoop = \textcolor{keyword}{false});}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} StopTheSound(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound);}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} StopAllSounds(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keywordtype}{bool} isBigEndian();}
+\DoxyCodeLine{51 \textcolor{keywordtype}{int} convertToInt(\textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{int} len);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{char}* loadWAV(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fn, \textcolor{keywordtype}{int}\& chan, \textcolor{keywordtype}{int}\& samplerate, \textcolor{keywordtype}{int}\& bps, \textcolor{keywordtype}{int}\& size);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56 }
+
+\end{DoxyCode}

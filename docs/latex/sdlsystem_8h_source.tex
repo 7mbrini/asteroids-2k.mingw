@@ -1,0 +1,41 @@
+\hypertarget{sdlsystem_8h_source}{}\doxysection{sdlsystem.\+h}
+\label{sdlsystem_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/sdlsystem.h@{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/sdlsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SDLSYSTEM\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SDLSYSTEM\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{//\#include <sdl2/sdl.h>}}
+\DoxyCodeLine{5 \textcolor{comment}{//\#include <sdl2/sdl\_audio.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}vectors.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} SDL\_Window;}
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} SDL\_Renderer;}
+\DoxyCodeLine{12 \textcolor{keyword}{typedef} \textcolor{keywordtype}{void} TTF\_Font;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_s_d_l_system}{TSDLSystem}} \{}
+\DoxyCodeLine{16     SDL\_Window* pWindow;}
+\DoxyCodeLine{17     SDL\_Renderer* pRenderer;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     HWND hWnd;}
+\DoxyCodeLine{20     RECT ClientArea;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     HDC hDC, hMemDC;}
+\DoxyCodeLine{23     HBITMAP hBmp;}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keywordtype}{bool} InitSDL(\mbox{\hyperlink{struct_t_s_d_l_system}{TSDLSystem}}* pSDLSystem);}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} QuitSDL(\mbox{\hyperlink{struct_t_s_d_l_system}{TSDLSystem}}* pSDLSystem);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \mbox{\hyperlink{struct_t_vector2}{TVector2}} GetScreenCenter(\mbox{\hyperlink{struct_t_s_d_l_system}{TSDLSystem}}* pSDLSystem);}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} DrawLines(SDL\_Renderer* pRenderer, TVecPoints\& Pts, COLORREF Color);}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} DrawLines(SDL\_Renderer* pRenderer, TVecVecPoints\& Pts, COLORREF Color);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+
+\end{DoxyCode}
