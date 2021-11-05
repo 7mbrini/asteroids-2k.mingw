@@ -27,7 +27,8 @@
 * @param	pAsteroid Pointer to the asteroid data structure
 * @param	pVM Pointer to the video manager data structure
 * @param	nClass Class identifier of the asteroid (e.g.: big, medium, small)
-* @param	Pos The initial position of the asteroid
+* @param	Pos The initial position for the asteroid
+* @param	Vel The initial velocity for the asteroid
 * @param	Radius The size of the asteroid
 ******************************************************************************/
 void Build(TAsteroid* pAsteroid, TVideoManager* pVM,
@@ -63,6 +64,7 @@ bool IsAlive(TAsteroid* pAsteroid)
 /*!****************************************************************************
 * @brief	Checks if the asteroid is colliding in a specified position
 * @param	pAsteroid Pointer to the asteroid data structure
+* @param	Pt The position to check for collision detection
 * @return	True if the asteroid is colliding, false otherwise
 ******************************************************************************/
 bool Collide(TAsteroid* pAsteroid, TVector2 Pt)

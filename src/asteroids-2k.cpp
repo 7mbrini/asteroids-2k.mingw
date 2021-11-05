@@ -124,7 +124,7 @@ int Cleanup()
 }
 
 /*!****************************************************************************
-* @nop	For debug only purpose
+* @noop	For debug only purpose
 *
 * The right syntax for windres is:
 * windres resource.rc -o resource.res -F pe-x86-64 -O coff

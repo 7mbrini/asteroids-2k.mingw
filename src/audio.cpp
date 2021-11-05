@@ -262,6 +262,7 @@ void FreeTheSounds(TSoundManager* pSM)
 /*!****************************************************************************
 * @brief	Play and audio track
 * @param	pSM Pointer to the sound manager
+* @param	strSound The soundtrack to be played
 * @param	bLoop Flag for looping: true if must be played repeatedly
 ******************************************************************************/
 void PlayTheSound(TSoundManager* pSM, std::string strSound, bool bLoop)

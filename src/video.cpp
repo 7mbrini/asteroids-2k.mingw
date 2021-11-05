@@ -28,7 +28,7 @@
 
 /*!****************************************************************************
 * @brief	Initialize the video system
-* @param	pVideoManager Pointer to TVideoManager data structure
+* @param	pVM Pointer to TVideoManager data structure
 * @return	Returns true for success, false otherwise
 ******************************************************************************/
 bool SetupVideoManager(TVideoManager* pVM)
@@ -61,9 +61,10 @@ bool SetupVideoManager(TVideoManager* pVM)
 }
 
 
-//-----------------------------------------------------------------------------
-//	SCOPO:	Clean up and quit SDL
-//-----------------------------------------------------------------------------
+/*!****************************************************************************
+* @brief	Cleanup the video system
+* @param	pVM Pointer to TVideoManager data structure
+******************************************************************************/
 void CleanupVideoManager(TVideoManager* pVM)
 {
 	assert(pVM);
@@ -74,17 +75,24 @@ void CleanupVideoManager(TVideoManager* pVM)
 	::DeleteObject(pVM->hBmp);
 }
 
-//-----------------------------------------------------------------------------
-//	SCOPO:
-//-----------------------------------------------------------------------------
+/*!****************************************************************************
+* @brief	Gets client area coordinates
+* @param	pVM Pointer to TVideoManager data structure
+* @return	Returns the center coordinate of the client area
+******************************************************************************/
 TVector2 GetScreenCenter(TVideoManager* pVM)
 {
 	return TVector2 { pVM->ClientArea.right/2.0, pVM->ClientArea.bottom/2.0 };
 }
 
-//-----------------------------------------------------------------------------
-//	SCOPO:
-//-----------------------------------------------------------------------------
+/*!****************************************************************************
+* @brief	Draws ines
+* @param	pVM Pointer to TVideoManager data structure
+* @param	Pts Vector of line vertices
+* @param	nLineWidth Thickness of the line to be drawn
+* @param	Color Color of the polyline to be drawn
+* @param	bClosed Flag for closing: true for closed polylines
+******************************************************************************/
 void DrawLines(TVideoManager* pVM,
 	TVecPoints& Pts, int nLineWidth, COLORREF Color, bool bClosed)
 {
@@ -116,9 +124,14 @@ void DrawLines(TVideoManager* pVM,
 	::DeleteObject(hPen);
 }
 
-//-----------------------------------------------------------------------------
-//	SCOPO:
-//-----------------------------------------------------------------------------
+/*!****************************************************************************
+* @brief	Draws a series of polylines
+* @param	pVM Pointer to TVideoManager data structure
+* @param	Pts Vector of polylines
+* @param	nLineWidth Thickness of the polyline to be drawn
+* @param	Color Color of the polyline to be drawn
+* @param	bClosed Flag for closing: true for closed polylines
+******************************************************************************/
 void DrawLines(TVideoManager* pVM,
 	TVecVecPoints& Pts, int nLineWidth, COLORREF Color, bool bClosed)
 {
@@ -130,6 +143,12 @@ void DrawLines(TVideoManager* pVM,
 	}
 }
 
+/*!****************************************************************************
+* @brief	Draws a point
+* @param	pVM Pointer to TVideoManager data structure
+* @param	Pt Coordinates of point to be drawn
+* @param	Color Color of the polyline to be drawn
+******************************************************************************/
 void DrawPoint(TVideoManager* pVM, TVector2& Pt, COLORREF Color)
 {
 	assert(pVM);
@@ -141,6 +160,11 @@ void DrawPoint(TVideoManager* pVM, TVector2& Pt, COLORREF Color)
 	::SetPixel(hDC, Pt.X, Pt.Y, Color);
 }
 
+/*!****************************************************************************
+* @brief	Clears the screen
+* @param	pVM Pointer to TVideoManager data structure
+* @param	Color The filling color
+******************************************************************************/
 void ClearScreen(TVideoManager* pVM, COLORREF Color)
 {
 	HBRUSH hBrush = ::CreateSolidBrush(Color);
@@ -154,6 +178,13 @@ void ClearScreen(TVideoManager* pVM, COLORREF Color)
 	::DeleteObject(hBrush);
 }
 
+/*!****************************************************************************
+* @brief	Loads a true type (ttf) font from file
+* @param	pVM Pointer to TVideoManager data structure
+* @param	strFontPath Full path to file containing the font
+* @param	strName Name for the font
+* @param	nSize The size of the font
+******************************************************************************/
 bool LoadFont(TVideoManager* pVM,
 	std::string strFontPath, std::wstring strName, int nSize)
 {
@@ -192,6 +223,15 @@ std::string strFontName = converter.to_bytes(strName);
 	return bResult;
 }
 
+/*!****************************************************************************
+* @brief	Draws a text
+* @param	pVM Pointer to TVideoManager data structure
+* @param	pText Pointer to a text string
+* @param	nX The X coordinate for the text
+* @param	nY The Y coordinate for the text
+* @param	nColor The color for the text
+* @param	nAlign The alignment for the text
+******************************************************************************/
 void DrawText(TVideoManager* pVM, char* pText, int nX, int nY, COLORREF nColor, UINT nAlign)
 {
 	assert(pText);
@@ -204,9 +244,16 @@ void DrawText(TVideoManager* pVM, char* pText, int nX, int nY, COLORREF nColor, 
 	::TextOutA(pVM->hDC, nX, nY, (LPCSTR) pText, strlen(pText));
 }
 
-//-----------------------------------------------------------------------------
-//	SCOPO:
-//-----------------------------------------------------------------------------
+/*!****************************************************************************
+* @brief	Draws a multiple lines of text
+* @param	pVM Pointer to TVideoManager data structure
+* @param	StringList A list of text strings
+* @param	nX The X coordinate for the text
+* @param	nY The Y coordinate for the text
+* @param	nLineHeight The height for the text
+* @param	nColor The color for the text
+* @param	nAlign The alignment for the text
+******************************************************************************/
 void DrawText(TVideoManager *pVM,
 	std::vector<std::string> StringList, int nX, int nY, int nLineHeight, COLORREF nColor, UINT nAlign)
 {
@@ -218,32 +265,5 @@ void DrawText(TVideoManager *pVM,
 
 		nY += 1.25 * nLineHeight;
 	}
-
-/*
-	if( StringList.size() )
-	{
-		for(int i=0; i<StringList.size(); ++i)
-		{
-			SDL_Surface *pSurface = TTF_RenderText_Solid(pGame->pFont, StringList[i].c_str(), SDL_Color { 255, 255, 255 } );
-			SDL_Texture *pTexture = SDL_CreateTextureFromSurface(pGame->pSDLSystem->pRenderer, pSurface);
-
-			int nTexW = 0, nTexH = 0;
-			SDL_QueryTexture(pTexture, NULL, NULL, &nTexW, &nTexH);
-
-			//SDL_Rect dstrect = { nX - nTexW/2.0, nY, nTexW, nTexH };	// left aligned
-			SDL_Rect dstrect = { nX - nTexW/2.0, nY, nTexW, nTexH };	// centered text
-
-			//nY += nTexH;
-			nY += 1.25 * nTexH;		// adds an extra space (interline)
-
-			SDL_RenderCopy(pGame->pSDLSystem->pRenderer, pTexture, NULL, &dstrect);
-
-			//SDL_RenderPresent(pGame->pSDLSystem->pRenderer);
-
-			SDL_DestroyTexture(pTexture);
-			SDL_FreeSurface(pSurface);
-		}
-	}
-*/
 }
 

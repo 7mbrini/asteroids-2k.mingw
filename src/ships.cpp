@@ -270,7 +270,7 @@ double GetRot(TShip* pShip)
 /*!****************************************************************************
 * @brief	Set the ship velocity
 * @param	pShip Pointer to the ship data structure
-* @param	The velocity value to be set for the ship
+* @param	Vel The velocity value to be set for the ship
 ******************************************************************************/
 void SetVel(TShip* pShip, TVector2 Vel)
 {

@@ -28,6 +28,8 @@ void Build(TVector2& Pt)
 
 /*!****************************************************************************
 * @brief	Builds the vector with values of X and Y
+* @param	X The X coordinate value for the point
+* @param	Y The Y coordinate value for the point
 * @param	Pt Referernce to a vector data structure
 ******************************************************************************/
 void Build(TVector2& Pt, double X, double Y)
@@ -119,7 +121,7 @@ void Rotate(TVecPoints& VecPts, double ThetaDeg)
 
 /*!****************************************************************************
 * @brief			Rotates a list of a list of points around the axis origin
-* @param[in,out]	Src Referernce to a list of list of points data structures
+* @param[in,out]	VecPts Referernce to a list of list of points data structures
 * @param			ThetaDeg The angle of rotation, in degrees
 ******************************************************************************/
 void Rotate(TVecVecPoints& VecPts, double ThetaDeg)
@@ -156,7 +158,7 @@ void Translate(TVecPoints& Src, TVector2 Translation)
 
 /*!****************************************************************************
 * @brief	Translates a list of a list of points
-* @param	Src Referernce to a list of list of points data structures
+* @param	VecPts Referernce to a list of list of points data structures
 * @param	Translation The value for translation
 ******************************************************************************/
 void Translate(TVecVecPoints& VecPts, TVector2 Translation)

@@ -283,8 +283,8 @@ bool LoadTheHelp(TGame* pGame)
 
 /*!****************************************************************************
 * @brief	Load the best scores from file
+* @param	pGame Pointer to the game engine
 * @param	pFileName Pointer to the filename string
-* @param	Records Vector of TRecord data structure
 * @return	Returns true for success, false otherwise
 ******************************************************************************/
 bool LoadTheBestScores(TGame* pGame, char* pFileName)
