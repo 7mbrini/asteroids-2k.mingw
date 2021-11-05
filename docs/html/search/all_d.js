@@ -1,13 +1,16 @@
 var searchData=
 [
-  ['rand_0',['Rand',['../maths_8cpp.html#aaa94b7f0e57eef18a2eedf8d56202ca6',1,'Rand(double Val):&#160;maths.cpp'],['../maths_8h.html#aaa94b7f0e57eef18a2eedf8d56202ca6',1,'Rand(double Val):&#160;maths.cpp']]],
-  ['randshape_1',['RandShape',['../asteroids_8cpp.html#a91d85dde088ce20e688775551e80113f',1,'RandShape(double Size):&#160;asteroids.cpp'],['../asteroids_8h.html#a91d85dde088ce20e688775551e80113f',1,'RandShape(double Size):&#160;asteroids.cpp']]],
-  ['randsign_2',['RandSign',['../maths_8cpp.html#afdbb7807f627b85facf821b0d09a47d4',1,'RandSign():&#160;maths.cpp'],['../maths_8h.html#afdbb7807f627b85facf821b0d09a47d4',1,'RandSign():&#160;maths.cpp']]],
-  ['registerbestscore_3',['RegisterBestScore',['../game_8cpp.html#acfa84146cd29adc56bc11aa02a06947a',1,'RegisterBestScore(TGame *pGame):&#160;game.cpp'],['../game_8h.html#acfa84146cd29adc56bc11aa02a06947a',1,'RegisterBestScore(TGame *pGame):&#160;game.cpp']]],
-  ['reset_4',['Reset',['../ships_8cpp.html#a9a01df9914c3abfb7836313f6421382d',1,'Reset(TShip *pShip):&#160;ships.cpp'],['../ships_8h.html#a9a01df9914c3abfb7836313f6421382d',1,'Reset(TShip *pShip):&#160;ships.cpp']]],
-  ['restart_5',['Restart',['../game_8cpp.html#af8bbde2c5b5648635eb4bc1cb4f95440',1,'Restart(TGame *pGame):&#160;game.cpp'],['../game_8h.html#af8bbde2c5b5648635eb4bc1cb4f95440',1,'Restart(TGame *pGame):&#160;game.cpp']]],
-  ['rotate_6',['Rotate',['../vectors_8cpp.html#a02a72fcf81456139063f43c2751778c8',1,'Rotate(TVector2 &amp;Src, double ThetaDeg):&#160;vectors.cpp'],['../vectors_8cpp.html#ab529019f48b3de5aab2a2074c7fe4527',1,'Rotate(TVecPoints &amp;VecPts, double ThetaDeg):&#160;vectors.cpp'],['../vectors_8cpp.html#a382f68f1b407c4e67d44d817cb31ebbc',1,'Rotate(TVecVecPoints &amp;VecPts, double ThetaDeg):&#160;vectors.cpp'],['../vectors_8h.html#a02a72fcf81456139063f43c2751778c8',1,'Rotate(TVector2 &amp;Src, double ThetaDeg):&#160;vectors.cpp'],['../vectors_8h.html#ab529019f48b3de5aab2a2074c7fe4527',1,'Rotate(TVecPoints &amp;VecPts, double ThetaDeg):&#160;vectors.cpp'],['../vectors_8h.html#a382f68f1b407c4e67d44d817cb31ebbc',1,'Rotate(TVecVecPoints &amp;VecPts, double ThetaDeg):&#160;vectors.cpp']]],
-  ['rotateleft_7',['RotateLeft',['../ships_8cpp.html#a8fededbb977f078b5862f40343099ba7',1,'RotateLeft(TShip *pShip, double DAngleDeg):&#160;ships.cpp'],['../ships_8h.html#a8fededbb977f078b5862f40343099ba7',1,'RotateLeft(TShip *pShip, double DAngleDeg):&#160;ships.cpp']]],
-  ['rotateright_8',['RotateRight',['../ships_8cpp.html#ae80e53f34de49aa48f0da485d7d19a47',1,'RotateRight(TShip *pShip, double DAngleDeg):&#160;ships.cpp'],['../ships_8h.html#ae80e53f34de49aa48f0da485d7d19a47',1,'RotateRight(TShip *pShip, double DAngleDeg):&#160;ships.cpp']]],
-  ['run_9',['Run',['../game_8cpp.html#a14c8870379cbb403a08c5fe1ebabf1fa',1,'Run(TGame *pGame):&#160;game.cpp'],['../game_8h.html#a14c8870379cbb403a08c5fe1ebabf1fa',1,'Run(TGame *pGame):&#160;game.cpp']]]
+  ['palccontext_0',['pAlcContext',['../struct_t_a_l_system.html#ad07a0336e985a9ec0c05c49265f1d7e9',1,'TALSystem']]],
+  ['palcdevice_1',['pAlcDevice',['../struct_t_a_l_system.html#add844e0817d78c4be96910f9a62871b3',1,'TALSystem']]],
+  ['palsystem_2',['pALSystem',['../struct_t_sound_manager.html#a2412646d75b9131a830a8916f9b9c06d',1,'TSoundManager']]],
+  ['pasteroids_3',['pAsteroids',['../struct_t_game.html#a5e18116d53c38a84841c5105f8e3e4ec',1,'TGame']]],
+  ['pausethegame_4',['PauseTheGame',['../game_8cpp.html#affce4fa1cb7c7bf361bb4f245dcc3b05',1,'PauseTheGame(TGame *pGame):&#160;game.cpp'],['../game_8h.html#affce4fa1cb7c7bf361bb4f245dcc3b05',1,'PauseTheGame(TGame *pGame):&#160;game.cpp']]],
+  ['pbestscoresname_5',['pBestScoresName',['../struct_t_game.html#a0969d5133f9a0f03c6ed51eede8695da',1,'TGame']]],
+  ['playthesound_6',['PlayTheSound',['../audio_8cpp.html#a85a6cce73e7843dd428567397d56427c',1,'PlayTheSound(TSoundManager *pSM, std::string strSound, bool bLoop):&#160;audio.cpp'],['../audio_8h.html#a3b7b5dcf847a8bf3bc9d9a403f63ccb4',1,'PlayTheSound(TSoundManager *pSM, std::string strSound, bool bLoop=false):&#160;audio.cpp']]],
+  ['pmissiles_7',['pMissiles',['../struct_t_game.html#aca6e11f4df96bff378614ebe7c7ac344',1,'TGame']]],
+  ['pos_8',['Pos',['../struct_t_asteroid.html#a31c39226ae3e6abc4e28758f970b6f11',1,'TAsteroid::Pos()'],['../struct_t_ship.html#a2d885cfbf68d3a5ad73ac593f2fda793',1,'TShip::Pos()'],['../struct_t_missile.html#aa530d21516140cca19dfcef6d17e1d40',1,'TMissile::Pos()']]],
+  ['pship_9',['pShip',['../struct_t_missile.html#a4795ba3dede811a18927d141c7fd05c0',1,'TMissile']]],
+  ['pships_10',['pShips',['../struct_t_game.html#a17b31dd9a99c3ec434b467b85eadfbd3',1,'TGame']]],
+  ['psm_11',['pSM',['../struct_t_game.html#ac740a9ffd28f0192c76050e81272587c',1,'TGame::pSM()'],['../struct_t_ship.html#a52a0c07b568136d27a5d099b8b532332',1,'TShip::pSM()']]],
+  ['pvm_12',['pVM',['../struct_t_asteroid.html#adfd61f25c8fa75cfcb31d07d7b3ad025',1,'TAsteroid::pVM()'],['../struct_t_game.html#a2e35d06bad30f5a35a0649c4de85da68',1,'TGame::pVM()'],['../struct_t_ship.html#a58eae70e7429b12daa250ea643311264',1,'TShip::pVM()'],['../struct_t_missile.html#a3bceddf6a2bd8b5212bb34a063ec194d',1,'TMissile::pVM()']]]
 ];

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['safetydistance_0',['SAFETYDISTANCE',['../game_8cpp.html#a9ed1cdb2312a8490676af616f8fc7c16',1,'game.cpp']]],
+  ['shieldticks_1',['SHIELDTICKS',['../ships_8cpp.html#a9dc6af36297695fd08c97dcf3202f65a',1,'ships.cpp']]],
+  ['ship_5fexplosionticks_2',['SHIP_EXPLOSIONTICKS',['../ships_8h.html#a08f08f6f233aa93114b2be56bf6e70c5',1,'ships.h']]],
+  ['ship_5fimpulse_3',['SHIP_IMPULSE',['../ships_8h.html#ad8601b9643881a26b66a26c69e927070',1,'ships.h']]],
+  ['ship_5fimpulseticks_4',['SHIP_IMPULSETICKS',['../ships_8h.html#adfdf5e5b02080554e5e96db7cd70947e',1,'ships.h']]],
+  ['ship_5fmaxvel_5',['SHIP_MAXVEL',['../ships_8h.html#a0edcdc89a6c18e276021d24680b29a32',1,'ships.h']]],
+  ['ship_5fndebris_6',['SHIP_NDEBRIS',['../ships_8h.html#a5d29b7347258f1c58bd7cbde80ceba8a',1,'ships.h']]],
+  ['ship_5frotstep_7',['SHIP_ROTSTEP',['../ships_8h.html#ad7f43edf95874273f2c5680c398ce418',1,'ships.h']]],
+  ['ship_5fsize_8',['SHIP_SIZE',['../ships_8h.html#acdcd3f5ea90cace068825537fe274dbe',1,'ships.h']]],
+  ['ship_5fvelstep_9',['SHIP_VELSTEP',['../ships_8h.html#a3403893c0aac6079a1555ef7dbb91b99',1,'ships.h']]],
+  ['shotdelay_10',['SHOTDELAY',['../game_8cpp.html#aed65468f624beea85348d5f3dc9f9ef2',1,'game.cpp']]],
+  ['smallalienshipscore_11',['SMALLALIENSHIPSCORE',['../game_8cpp.html#ac95cb398f0ddef1a23fb76711a78de97',1,'game.cpp']]],
+  ['smallasteroidscore_12',['SMALLASTEROIDSCORE',['../game_8cpp.html#ad7bdb2d4f8392290e34b730530e087a8',1,'game.cpp']]],
+  ['splashdelay_13',['SPLASHDELAY',['../game_8cpp.html#a781b2c17dcce63e671f5ed8d0dedc545',1,'game.cpp']]],
+  ['startlevel_14',['STARTLEVEL',['../game_8cpp.html#a6650fe087ba4ca094c337d5784cd9aaa',1,'game.cpp']]],
+  ['startscore_15',['STARTSCORE',['../game_8cpp.html#ac8af44310b531d493cbc488f0b48407a',1,'game.cpp']]]
+];

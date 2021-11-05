@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['mainloop_0',['MainLoop',['../asteroids-2k_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e',1,'asteroids-2k.cpp']]],
-  ['maths_2ecpp_1',['maths.cpp',['../maths_8cpp.html',1,'']]],
-  ['maths_2eh_2',['maths.h',['../maths_8h.html',1,'']]],
-  ['mod_3',['Mod',['../vectors_8cpp.html#a9b477a01264b28fe9a59f4eb5a48469d',1,'Mod(TVector2 &amp;Pt):&#160;vectors.cpp'],['../vectors_8h.html#a9b477a01264b28fe9a59f4eb5a48469d',1,'Mod(TVector2 &amp;Pt):&#160;vectors.cpp']]]
+  ['levelhandler_0',['LevelHandler',['../game_8cpp.html#a9e43e0c5fe96925c5113e61435f534e3',1,'LevelHandler(TGame *pGame):&#160;game.cpp'],['../game_8h.html#a9e43e0c5fe96925c5113e61435f534e3',1,'LevelHandler(TGame *pGame):&#160;game.cpp']]],
+  ['loadfont_1',['LoadFont',['../video_8cpp.html#a9f6eb4b90ce612b14c1aba615ce8db68',1,'LoadFont(TVideoManager *pVM, std::string strFontPath, std::wstring strName, int nSize):&#160;video.cpp'],['../video_8h.html#a9f6eb4b90ce612b14c1aba615ce8db68',1,'LoadFont(TVideoManager *pVM, std::string strFontPath, std::wstring strName, int nSize):&#160;video.cpp']]],
+  ['loadthebestscores_2',['LoadTheBestScores',['../game_8cpp.html#a5d84486f81cfbf1a097f567a27df53ad',1,'LoadTheBestScores(TGame *pGame, char *pFileName):&#160;game.cpp'],['../game_8h.html#a5d84486f81cfbf1a097f567a27df53ad',1,'LoadTheBestScores(TGame *pGame, char *pFileName):&#160;game.cpp']]],
+  ['loadthehelp_3',['LoadTheHelp',['../game_8cpp.html#ae33a616c6d84e3829e0a1dab01d9c01f',1,'LoadTheHelp(TGame *pGame):&#160;game.cpp'],['../game_8h.html#ae33a616c6d84e3829e0a1dab01d9c01f',1,'LoadTheHelp(TGame *pGame):&#160;game.cpp']]],
+  ['loadthesound_4',['LoadTheSound',['../audio_8cpp.html#a2f6e89259aa74ff437660258f111de3f',1,'LoadTheSound(TSoundManager *pSM, std::string strFileName):&#160;audio.cpp'],['../audio_8h.html#a2f6e89259aa74ff437660258f111de3f',1,'LoadTheSound(TSoundManager *pSM, std::string strFileName):&#160;audio.cpp']]],
+  ['loadthesounds_5',['LoadTheSounds',['../audio_8cpp.html#adc242cd5f26893fc7a64c78e9bed19aa',1,'LoadTheSounds(TSoundManager *pSM, std::vector&lt; std::string &gt; strSounds):&#160;audio.cpp'],['../audio_8h.html#adc242cd5f26893fc7a64c78e9bed19aa',1,'LoadTheSounds(TSoundManager *pSM, std::vector&lt; std::string &gt; strSounds):&#160;audio.cpp'],['../game_8cpp.html#a33e74f13af0692b30db06aa4206cdb21',1,'LoadTheSounds(TGame *pGame):&#160;game.cpp'],['../game_8h.html#a33e74f13af0692b30db06aa4206cdb21',1,'LoadTheSounds(TGame *pGame):&#160;game.cpp']]],
+  ['loadwav_6',['LoadWAV',['../audio_8cpp.html#ae5cc10d1202e4c540acbd4a39cf1174c',1,'LoadWAV(std::string strFileName, int &amp;nChannels, int &amp;nSampleRate, int &amp;nBps, int &amp;nSize):&#160;audio.cpp'],['../audio_8h.html#ae5cc10d1202e4c540acbd4a39cf1174c',1,'LoadWAV(std::string strFileName, int &amp;nChannels, int &amp;nSampleRate, int &amp;nBps, int &amp;nSize):&#160;audio.cpp']]]
 ];

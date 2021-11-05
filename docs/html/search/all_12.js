@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['weapons_2ecpp_0',['weapons.cpp',['../weapons_8cpp.html',1,'']]],
-  ['weapons_2eh_1',['weapons.h',['../weapons_8h.html',1,'']]],
-  ['winmain_2',['WinMain',['../asteroids-2k_8cpp.html#a649028f00e62144f15f268d14bc6dae0',1,'asteroids-2k.cpp']]],
-  ['wndproc_3',['WndProc',['../asteroids-2k_8cpp.html#a30a1e3b0304f1b083637664cbda94e72',1,'asteroids-2k.cpp']]]
+  ['vectors_2ecpp_0',['vectors.cpp',['../vectors_8cpp.html',1,'']]],
+  ['vectors_2eh_1',['vectors.h',['../vectors_8h.html',1,'']]],
+  ['vel_2',['Vel',['../struct_t_asteroid.html#a2c451ae414a620697a9e907be47cc6d3',1,'TAsteroid::Vel()'],['../struct_t_ship.html#a3f97e77f7be6995159a6f1b6e9501bed',1,'TShip::Vel()'],['../struct_t_missile.html#a9bf9dd316cf082420c78311f69003a43',1,'TMissile::Vel()']]],
+  ['video_2ecpp_3',['video.cpp',['../video_8cpp.html',1,'']]],
+  ['video_2eh_4',['video.h',['../video_8h.html',1,'']]]
 ];
