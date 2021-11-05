@@ -88,37 +88,484 @@ Functions</h2></td></tr>
 <tr class="memitem:abacda3d4cb1dbaa10a195749969b838d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#abacda3d4cb1dbaa10a195749969b838d">SetupVideoManager</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM)</td></tr>
 <tr class="memdesc:abacda3d4cb1dbaa10a195749969b838d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the video system.  <a href="video_8h.html#abacda3d4cb1dbaa10a195749969b838d">More...</a><br /></td></tr>
 <tr class="separator:abacda3d4cb1dbaa10a195749969b838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7918725512841062e255a7a95d312ace"><td class="memItemLeft" align="right" valign="top"><a id="a7918725512841062e255a7a95d312ace" name="a7918725512841062e255a7a95d312ace"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CleanupVideoManager</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM)</td></tr>
+<tr class="memitem:a7918725512841062e255a7a95d312ace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a7918725512841062e255a7a95d312ace">CleanupVideoManager</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM)</td></tr>
+<tr class="memdesc:a7918725512841062e255a7a95d312ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup the video system.  <a href="video_8h.html#a7918725512841062e255a7a95d312ace">More...</a><br /></td></tr>
 <tr class="separator:a7918725512841062e255a7a95d312ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65e341a7cf3d2c3e1a3b4f0aba2d346e"><td class="memItemLeft" align="right" valign="top"><a id="a65e341a7cf3d2c3e1a3b4f0aba2d346e" name="a65e341a7cf3d2c3e1a3b4f0aba2d346e"></a>
-<a class="el" href="struct_t_vector2.html">TVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetScreenCenter</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM)</td></tr>
+<tr class="memitem:a65e341a7cf3d2c3e1a3b4f0aba2d346e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_vector2.html">TVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a65e341a7cf3d2c3e1a3b4f0aba2d346e">GetScreenCenter</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM)</td></tr>
+<tr class="memdesc:a65e341a7cf3d2c3e1a3b4f0aba2d346e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets client area coordinates.  <a href="video_8h.html#a65e341a7cf3d2c3e1a3b4f0aba2d346e">More...</a><br /></td></tr>
 <tr class="separator:a65e341a7cf3d2c3e1a3b4f0aba2d346e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c850c8ea921ff8efc3837e8438654d2"><td class="memItemLeft" align="right" valign="top"><a id="a6c850c8ea921ff8efc3837e8438654d2" name="a6c850c8ea921ff8efc3837e8438654d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawLines</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, TVecPoints &amp;Pts, int nLineWidth, COLORREF Color, bool bClosed=false)</td></tr>
+<tr class="memitem:a6c850c8ea921ff8efc3837e8438654d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a6c850c8ea921ff8efc3837e8438654d2">DrawLines</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, <a class="el" href="vectors_8h.html#a058aac72e10aa2af6b9086d71fce3633">TVecPoints</a> &amp;Pts, int nLineWidth, COLORREF Color, bool bClosed=false)</td></tr>
+<tr class="memdesc:a6c850c8ea921ff8efc3837e8438654d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws ines.  <a href="video_8h.html#a6c850c8ea921ff8efc3837e8438654d2">More...</a><br /></td></tr>
 <tr class="separator:a6c850c8ea921ff8efc3837e8438654d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9a6b7a7a0f7c6537abe5497df68347a"><td class="memItemLeft" align="right" valign="top"><a id="ac9a6b7a7a0f7c6537abe5497df68347a" name="ac9a6b7a7a0f7c6537abe5497df68347a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawLines</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, TVecVecPoints &amp;Pts, int nLineWidth, COLORREF Color, bool bClosed=false)</td></tr>
+<tr class="memitem:ac9a6b7a7a0f7c6537abe5497df68347a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#ac9a6b7a7a0f7c6537abe5497df68347a">DrawLines</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, <a class="el" href="vectors_8h.html#ac45f4a059477deda847e95b16e8b92a5">TVecVecPoints</a> &amp;Pts, int nLineWidth, COLORREF Color, bool bClosed=false)</td></tr>
+<tr class="memdesc:ac9a6b7a7a0f7c6537abe5497df68347a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a series of polylines.  <a href="video_8h.html#ac9a6b7a7a0f7c6537abe5497df68347a">More...</a><br /></td></tr>
 <tr class="separator:ac9a6b7a7a0f7c6537abe5497df68347a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0382c169b606787e15001abb288752ab"><td class="memItemLeft" align="right" valign="top"><a id="a0382c169b606787e15001abb288752ab" name="a0382c169b606787e15001abb288752ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawPoint</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, <a class="el" href="struct_t_vector2.html">TVector2</a> &amp;Pt, COLORREF Color)</td></tr>
+<tr class="memitem:a0382c169b606787e15001abb288752ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a0382c169b606787e15001abb288752ab">DrawPoint</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, <a class="el" href="struct_t_vector2.html">TVector2</a> &amp;Pt, COLORREF Color)</td></tr>
+<tr class="memdesc:a0382c169b606787e15001abb288752ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a point.  <a href="video_8h.html#a0382c169b606787e15001abb288752ab">More...</a><br /></td></tr>
 <tr class="separator:a0382c169b606787e15001abb288752ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af476c0801d1d5be15cd27b56912f0f18"><td class="memItemLeft" align="right" valign="top"><a id="af476c0801d1d5be15cd27b56912f0f18" name="af476c0801d1d5be15cd27b56912f0f18"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearScreen</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, COLORREF Color)</td></tr>
+<tr class="memitem:af476c0801d1d5be15cd27b56912f0f18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#af476c0801d1d5be15cd27b56912f0f18">ClearScreen</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, COLORREF Color)</td></tr>
+<tr class="memdesc:af476c0801d1d5be15cd27b56912f0f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the screen.  <a href="video_8h.html#af476c0801d1d5be15cd27b56912f0f18">More...</a><br /></td></tr>
 <tr class="separator:af476c0801d1d5be15cd27b56912f0f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f6eb4b90ce612b14c1aba615ce8db68"><td class="memItemLeft" align="right" valign="top"><a id="a9f6eb4b90ce612b14c1aba615ce8db68" name="a9f6eb4b90ce612b14c1aba615ce8db68"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadFont</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, std::string strFontPath, std::wstring strName, int nSize)</td></tr>
+<tr class="memitem:a9f6eb4b90ce612b14c1aba615ce8db68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a9f6eb4b90ce612b14c1aba615ce8db68">LoadFont</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, std::string strFontPath, std::wstring strName, int nSize)</td></tr>
+<tr class="memdesc:a9f6eb4b90ce612b14c1aba615ce8db68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a true type (ttf) font from file.  <a href="video_8h.html#a9f6eb4b90ce612b14c1aba615ce8db68">More...</a><br /></td></tr>
 <tr class="separator:a9f6eb4b90ce612b14c1aba615ce8db68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a732ba9370bedb73b49031e3e38fbbdd2"><td class="memItemLeft" align="right" valign="top"><a id="a732ba9370bedb73b49031e3e38fbbdd2" name="a732ba9370bedb73b49031e3e38fbbdd2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawText</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, char *pText, int nX, int nY, COLORREF nColor=RGB(255, 255, 255), UINT nAlign=TA_CENTER)</td></tr>
+<tr class="memitem:a732ba9370bedb73b49031e3e38fbbdd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#a732ba9370bedb73b49031e3e38fbbdd2">DrawText</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, char *pText, int nX, int nY, COLORREF nColor=RGB(255, 255, 255), UINT nAlign=TA_CENTER)</td></tr>
+<tr class="memdesc:a732ba9370bedb73b49031e3e38fbbdd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a text.  <a href="video_8h.html#a732ba9370bedb73b49031e3e38fbbdd2">More...</a><br /></td></tr>
 <tr class="separator:a732ba9370bedb73b49031e3e38fbbdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e3b35ad5e566f7a0734b01d1bf67e4"><td class="memItemLeft" align="right" valign="top"><a id="aa3e3b35ad5e566f7a0734b01d1bf67e4" name="aa3e3b35ad5e566f7a0734b01d1bf67e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawText</b> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, std::vector&lt; std::string &gt; StringList, int nX, int nY, int nTextH, COLORREF nColor=RGB(255, 255, 255), UINT nAlign=TA_CENTER)</td></tr>
+<tr class="memitem:aa3e3b35ad5e566f7a0734b01d1bf67e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video_8h.html#aa3e3b35ad5e566f7a0734b01d1bf67e4">DrawText</a> (<a class="el" href="struct_t_video_manager.html">TVideoManager</a> *pVM, std::vector&lt; std::string &gt; StringList, int nX, int nY, int nTextH, COLORREF nColor=RGB(255, 255, 255), UINT nAlign=TA_CENTER)</td></tr>
+<tr class="memdesc:aa3e3b35ad5e566f7a0734b01d1bf67e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a multiple lines of text.  <a href="video_8h.html#aa3e3b35ad5e566f7a0734b01d1bf67e4">More...</a><br /></td></tr>
 <tr class="separator:aa3e3b35ad5e566f7a0734b01d1bf67e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><hr  />
  </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a7918725512841062e255a7a95d312ace" name="a7918725512841062e255a7a95d312ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7918725512841062e255a7a95d312ace">&#9670;&nbsp;</a></span>CleanupVideoManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CleanupVideoManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleanup the video system. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af476c0801d1d5be15cd27b56912f0f18" name="af476c0801d1d5be15cd27b56912f0f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af476c0801d1d5be15cd27b56912f0f18">&#9670;&nbsp;</a></span>ClearScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearScreen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>Color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the screen. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">Color</td><td>The filling color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c850c8ea921ff8efc3837e8438654d2" name="a6c850c8ea921ff8efc3837e8438654d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c850c8ea921ff8efc3837e8438654d2">&#9670;&nbsp;</a></span>DrawLines() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vectors_8h.html#a058aac72e10aa2af6b9086d71fce3633">TVecPoints</a> &amp;&#160;</td>
+          <td class="paramname"><em>Pts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>Color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bClosed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws ines. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">Pts</td><td>Vector of line vertices </td></tr>
+    <tr><td class="paramname">nLineWidth</td><td>Thickness of the line to be drawn </td></tr>
+    <tr><td class="paramname">Color</td><td>Color of the polyline to be drawn </td></tr>
+    <tr><td class="paramname">bClosed</td><td>Flag for closing: true for closed polylines </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9a6b7a7a0f7c6537abe5497df68347a" name="ac9a6b7a7a0f7c6537abe5497df68347a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a6b7a7a0f7c6537abe5497df68347a">&#9670;&nbsp;</a></span>DrawLines() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vectors_8h.html#ac45f4a059477deda847e95b16e8b92a5">TVecVecPoints</a> &amp;&#160;</td>
+          <td class="paramname"><em>Pts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>Color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bClosed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a series of polylines. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">Pts</td><td>Vector of polylines </td></tr>
+    <tr><td class="paramname">nLineWidth</td><td>Thickness of the polyline to be drawn </td></tr>
+    <tr><td class="paramname">Color</td><td>Color of the polyline to be drawn </td></tr>
+    <tr><td class="paramname">bClosed</td><td>Flag for closing: true for closed polylines </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0382c169b606787e15001abb288752ab" name="a0382c169b606787e15001abb288752ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0382c169b606787e15001abb288752ab">&#9670;&nbsp;</a></span>DrawPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_vector2.html">TVector2</a> &amp;&#160;</td>
+          <td class="paramname"><em>Pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>Color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a point. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">Pt</td><td>Coordinates of point to be drawn </td></tr>
+    <tr><td class="paramname">Color</td><td>Color of the polyline to be drawn </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a732ba9370bedb73b49031e3e38fbbdd2" name="a732ba9370bedb73b49031e3e38fbbdd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732ba9370bedb73b49031e3e38fbbdd2">&#9670;&nbsp;</a></span>DrawText() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>nColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nAlign</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a text. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">pText</td><td>Pointer to a text string </td></tr>
+    <tr><td class="paramname">nX</td><td>The X coordinate for the text </td></tr>
+    <tr><td class="paramname">nY</td><td>The Y coordinate for the text </td></tr>
+    <tr><td class="paramname">nColor</td><td>The color for the text </td></tr>
+    <tr><td class="paramname">nAlign</td><td>The alignment for the text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa3e3b35ad5e566f7a0734b01d1bf67e4" name="aa3e3b35ad5e566f7a0734b01d1bf67e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e3b35ad5e566f7a0734b01d1bf67e4">&#9670;&nbsp;</a></span>DrawText() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>StringList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>nColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nAlign</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a multiple lines of text. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">StringList</td><td>A list of text strings </td></tr>
+    <tr><td class="paramname">nX</td><td>The X coordinate for the text </td></tr>
+    <tr><td class="paramname">nY</td><td>The Y coordinate for the text </td></tr>
+    <tr><td class="paramname">nLineHeight</td><td>The height for the text </td></tr>
+    <tr><td class="paramname">nColor</td><td>The color for the text </td></tr>
+    <tr><td class="paramname">nAlign</td><td>The alignment for the text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65e341a7cf3d2c3e1a3b4f0aba2d346e" name="a65e341a7cf3d2c3e1a3b4f0aba2d346e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e341a7cf3d2c3e1a3b4f0aba2d346e">&#9670;&nbsp;</a></span>GetScreenCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_vector2.html">TVector2</a> GetScreenCenter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets client area coordinates. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the center coordinate of the client area </dd></dl>
+
+</div>
+</div>
+<a id="a9f6eb4b90ce612b14c1aba615ce8db68" name="a9f6eb4b90ce612b14c1aba615ce8db68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6eb4b90ce612b14c1aba615ce8db68">&#9670;&nbsp;</a></span>LoadFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LoadFont </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_video_manager.html">TVideoManager</a> *&#160;</td>
+          <td class="paramname"><em>pVM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>strFontPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::wstring&#160;</td>
+          <td class="paramname"><em>strName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a true type (ttf) font from file. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">strFontPath</td><td>Full path to file containing the font </td></tr>
+    <tr><td class="paramname">strName</td><td>Name for the font </td></tr>
+    <tr><td class="paramname">nSize</td><td>The size of the font </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abacda3d4cb1dbaa10a195749969b838d" name="abacda3d4cb1dbaa10a195749969b838d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abacda3d4cb1dbaa10a195749969b838d">&#9670;&nbsp;</a></span>SetupVideoManager()</h2>
 
@@ -139,7 +586,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawText</b> (<a clas
 <hr  />
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pVideoManager</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
+    <tr><td class="paramname">pVM</td><td>Pointer to <a class="el" href="struct_t_video_manager.html">TVideoManager</a> data structure </td></tr>
   </table>
   </dd>
 </dl>
